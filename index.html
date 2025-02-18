@@ -3,95 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kasuma Dana Profile</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
-      rel="stylesheet"
-    />
+    <title>Kasuma Dana | Home</title>
     <link rel="stylesheet" href="assets/styles/style.css" />
   </head>
   <body>
     <header>
-      <h1>KASUMA DANA</h1>
+      <h1>Kasuma Dana</h1>
+      <nav>
+        <ul>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-    <nav>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <main>
-      <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-          <p>
-            Hello, I am Kasuma Dana. I am a student at SMKN 1 Denpasar in the
-            Software Engineering program. My interest in programming started
-            when I was in junior high school. I was born in Denpasar in 2008 and
-            have a hobby in photography.
-          </p>
-          <img src="assets/images/ProfilKasuma.png" alt="Kasuma Dana Profile" />
+    <main class="landing">
+      <section class="hero">
+        <div class="hero-content">
+          <h2>Welcome to My Portfolio</h2>
+          <p>Software Engineering Student & Tech Enthusiast</p>
+          <a href="about.html" class="cta-button">Get to Know Me</a>
         </div>
+        <img
+          src="assets/images/ProfilKasuma.png"
+          alt="Kasuma Dana"
+          class="hero-image"
+        />
       </section>
-      <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="portfolio-item">
-          <h3>Perang Pandan</h3>
-          <p>
-            A simple scratch project that simulates Perang Pandan, a unique
-            tradition from Tenganan Village in Bali, where two players fight
-            using thorny pandan leaves as weapons and shields.
-          </p>
-          <div class="iframe-container">
-            <iframe
-              src="https://scratch.mit.edu/projects/1104527429/embed"
-              allowtransparency="true"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-        <div class="portfolio-item">
-          <h3>Simple Website</h3>
-          <p>
-            A simple website project about Tenganan Village made using HTML and
-            CSS. This project is my first project in creating a website.
-          </p>
-        </div>
-      </section>
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>You can contact me through the following:</p>
-        <div class="social-media">
-          <a target="_blank" href="mailto:kasumadana06@gmail.com">
-            <img src="assets/icons/envelope.png" alt="Email" />
-            <p>kasumadana06@gmail.com</p>
-          </a>
-          <a target="_blank" href="https://github.com/kasumadana">
-            <img src="assets/icons/github.png" alt="GitHub" />
-            <p>@kasumadana</p>
-          </a>
-          <a target="_blank" href="https://instagram.com/kasumadana">
-            <img src="assets/icons/instagram.png" alt="Instagram" />
-            <p>@kasumadana</p>
-          </a>
-        </div>
-      </section>
-      <aside>
-        <h2>Fun Fact</h2>
-        <p>
-          Besides being interested in web development, I also have an interest
-          in gadgets and photography.
-        </p>
-      </aside>
     </main>
     <footer>
-      <p>2025 Kasuma Dana. All rights reserved.</p>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: kasumadana06@gmail.com</p>
+          <p>Location: Denpasar, Bali</p>
+        </div>
+        <div class="footer-section">
+          <h3>Social Media</h3>
+          <div class="social-icons">
+            <a href="https://github.com/kasumadana" target="_blank">
+              <img src="assets/icons/github.png" alt="GitHub" />
+            </a>
+            <a href="https://instagram.com/kasumadana" target="_blank">
+              <img src="assets/icons/instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://linkedin.com/in/kasumadana" target="_blank">
+              <img src="assets/icons/linkedin.png" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Kasuma Dana. All rights reserved.</p>
+      </div>
     </footer>
-    <script src="assets/scripts/main.js"></script>
   </body>
 </html>
