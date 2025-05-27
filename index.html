@@ -3,59 +3,198 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kasuma Dana | Home</title>
+    <title>Kasuma Dana | Modern Portfolio</title>
+    <link rel="icon" href="assets/icons/Alfgone.png" sizes="512x512" />
     <link rel="stylesheet" href="assets/styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <h1>Kasuma Dana</h1>
-      <nav>
-        <ul>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#landing" class="logo">Kasuma Dana</a>
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link">About Me</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
-      </nav>
-    </header>
-    <main class="landing">
-      <section class="hero">
-        <div class="hero-content">
-          <h2>Welcome to My Portfolio</h2>
-          <p>Software Engineering Student & Tech Enthusiast</p>
-          <a href="about.html" class="cta-button">Get to Know Me</a>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <img
-          src="assets/images/ProfilKasuma.png"
-          alt="Kasuma Dana"
-          class="hero-image"
-        />
-      </section>
-    </main>
-    <footer>
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Contact</h3>
-          <p>Email: kasumadana06@gmail.com</p>
-          <p>Location: Denpasar, Bali</p>
-        </div>
-        <div class="footer-section">
-          <h3>Social Media</h3>
-          <div class="social-icons">
-            <a href="https://github.com/kasumadana" target="_blank">
-              <img src="assets/icons/github.png" alt="GitHub" />
-            </a>
-            <a href="https://instagram.com/kasumadana" target="_blank">
-              <img src="assets/icons/instagram.png" alt="Instagram" />
-            </a>
-            <a href="https://linkedin.com/in/kasumadana" target="_blank">
-              <img src="assets/icons/linkedin.png" alt="LinkedIn" />
-            </a>
+      </div>
+    </nav>
+
+    <!-- Landing Section -->
+    <section id="landing" class="landing">
+      <div class="hero-content fade-in">
+        <h1 class="hero-title">Welcome to My Portfolio</h1>
+        <p class="hero-subtitle">
+          Software Engineering Student & Tech Enthusiast
+        </p>
+        <a href="#about" class="cta-button">Get to Know Me</a>
+      </div>
+      <div class="hero-image fade-in">
+        <img src="assets/images/ProfilKasuma.jpg" alt="Kasuma Dana" />
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2 class="section-title fade-in">About Me</h2>
+      <div class="about-content fade-in">
+        <p>
+          Hello, my name is I Gede Kasuma Dana, though most people call me
+          Kasuma. I'm a student at SMK Negeri 1 Denpasar majoring in Software
+          Development (RPL) and a graduate of the Coding Camp by DBS Foundation
+          2025, where I participated in the Front-end Back-end learning path.
+          Born and raised in this vibrant city, I have always been passionate
+          about technology, and I also enjoy photography, capturing life's
+          interesting moments as a hobby.
+        </p>
+        <p>
+          One of my most memorable experiences occurred when I was in the 2nd
+          grade. I had the rare opportunity to perform at the Bali Arts
+          Festival. Stepping onto the stage at the Art Center in Ardha Candra
+          with my art group, Sanggar Drupadi, and the music ensemble Palawara
+          opened my eyes to the beauty of the arts and ignited a creative spark
+          that I continue to nurture. Conversely, the passing of my
+          great-grandparents was a profoundly sorrowful event—especially losing
+          my great-grandfather, a cherished figure who always accompanied me as
+          I played musical instruments in our village. This experience taught me
+          the importance of cherishing every moment with our loved ones.
+        </p>
+        <p>
+          Throughout my educational journey, I actively participated in the
+          Spensix Multimedia Computer Club, where I honed my skills in Microsoft
+          Word. During this time, I achieved several accolades, such as winning
+          competitions at Alfa Prima and a local high school event, earning
+          recognition in a quiz contest organized by FAD Denpasar, and excelling
+          in an essay contest held by Bank BPD Bali. In the 8th grade, I was
+          entrusted with the role of Microsoft Word coordinator and later served
+          as the Vice Chairman of the club. Without this involvement, I might
+          never have developed the interest in software engineering that has
+          defined my educational path.
+        </p>
+        <p>
+          Looking ahead, I aspire to continue developing my potential. After
+          completing my vocational education, I plan to further my studies in
+          Informatics Engineering at Politeknik Negeri Bali, while also pursuing
+          part-time work to gain additional experience in the ever-evolving
+          world of technology.
+        </p>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+      <h2 class="section-title fade-in">Portfolio</h2>
+      <div class="portfolio-carousel fade-in">
+        <div class="portfolio-container" id="portfolioContainer">
+          <div class="portfolio-item">
+            <iframe
+              src="https://scratch.mit.edu/projects/1104527429/embed"
+              allowtransparency="true"
+              frameborder="0"
+              scrolling="no"
+              allowfullscreen
+            ></iframe>
+            <div class="portfolio-content">
+              <h3>Perang Pandan</h3>
+              <p>A simple scratch project that simulates Perang Pandan.</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img
+              src="assets/images/portfolio-photo1.png"
+              alt="Photography"
+              style="aspect-ratio: 3/4; object-fit: cover"
+            />
+            <div class="portfolio-content">
+              <h3>Photography</h3>
+              <p>A collection of my best photographs around Bali.</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img
+              src="assets/images/website-preview.jpg"
+              alt="Website Preview"
+            />
+            <div class="portfolio-content">
+              <h3>Simple Website</h3>
+              <p>A website project about Tenganan Village.</p>
+            </div>
           </div>
         </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="prevBtn">❮</button>
+          <button class="carousel-btn" id="nextBtn">❯</button>
+        </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Kasuma Dana. All rights reserved.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2 class="section-title fade-in">Contact</h2>
+      <p
+        style="
+          text-align: center;
+          margin-bottom: 2rem;
+          color: var(--text-secondary);
+        "
+        class="fade-in"
+      >
+        You can contact me through the following:
+      </p>
+      <div class="contact-grid fade-in">
+        <a
+          href="mailto:kasumadana06@gmail.com"
+          class="contact-card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="assets/icons/gmail.png" alt="Email" />
+          <p>kasumadana06@gmail.com</p>
+        </a>
+        <a
+          href="https://github.com/kasumadana"
+          class="contact-card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="assets/icons/github.png" alt="GitHub" />
+          <p>@kasumadana</p>
+        </a>
+        <a
+          href="https://instagram.com/kasumadana"
+          class="contact-card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="assets/icons/instagram.png" alt="Instagram" />
+          <p>@kasumadana</p>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/kasumadana/"
+          class="contact-card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="assets/icons/linkedin.png" alt="LinkedIn" />
+          <p>I Gede Kasuma Dana</p>
+        </a>
       </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 Kasuma Dana. All rights reserved.</p>
     </footer>
+
+    <script src="assets/scripts/main.js"></script>
   </body>
 </html>
