@@ -1,0 +1,30 @@
+# I Gede Kasuma Dana — Portfolio
+
+> Software Engineering (RPL) student at SMK Negeri 1 Denpasar, Bali. Focused on responsive web development, client-side computer vision interfaces, and modular system design.
+
+## Key Information
+- Name: I Gede Kasuma Dana (Kasuma Dana)
+- Role: Software Engineering Student
+- School: SMK Negeri 1 Denpasar (Rekayasa Perangkat Lunak)
+- Location: Denpasar, Bali, Indonesia
+- Primary Stack: Next.js, React, TypeScript, Laravel, Tailwind CSS, MediaPipe, TensorFlow.js
+- Canonical Site: https://me.kasuma.id/
+- Contact: contact@kasuma.id
+
+## Core Student Projects
+- Aksa: Adaptive Kinesthetic Learning Platform (Next.js, TypeScript, MediaPipe Vision, Supabase) — Touch-free educational platform using computer vision and voice AI. URL: https://aksa.kasuma.id
+- TaruPramana: Botanical Recommendation Engine (React, Express.js, OpenAI API, Tailwind CSS) — Normalized digital database translating Balinese lontar herbal remedies. Won Best Capstone Project at Coding Camp 2026. URL: https://www.tarupramana.web.id
+- Renty: Property Management & SaaS (Laravel, MySQL, Midtrans API, Tailwind CSS, React) — Multi-tenant rental management and automated financial ledger platform. URL: https://renty.kasuma.id
+- Rare Angon: The Sky Runner (JavaScript, TensorFlow.js, HTML5 Canvas) — Hand-gesture controlled arcade game celebrating Balinese kite culture. URL: https://rareangon.kasuma.id
+
+## Verified Honors & Competitions
+- 2nd Place, LKS Web Technology (Bali Province, 2026)
+- Best Capstone Project, Coding Camp powered by DBS Foundation (2026)
+- Distinction Graduate, Coding Camp powered by DBS Foundation (2025 & 2026)
+- 1st Place, Regional IT Quiz Competition (2025)
+
+## Links
+- Resume PDF: https://me.kasuma.id/assets/resume.pdf
+- Opportunities & Terms: https://me.kasuma.id/pricing.md
+- GitHub: https://github.com/kasumadana
+- LinkedIn: https://www.linkedin.com/in/kasumadana/

@@ -6,10 +6,10 @@
     <title>I Gede Kasuma Dana | Software Engineering Student</title>
     <meta
       name="description"
-      content="Personal portfolio of I Gede Kasuma Dana, full-stack software engineer and applied AI developer based in Bali."
+      content="Personal portfolio of I Gede Kasuma Dana, a Software Engineering student at SMK Negeri 1 Denpasar, Bali."
     />
     <meta name="author" content="I Gede Kasuma Dana" />
-    <link rel="canonical" href="https://www.kasuma.id/" />
+    <link rel="canonical" href="https://me.kasuma.id/" />
 
     <!-- OpenGraph Metadata -->
     <meta property="og:site_name" content="Kasuma Dana" />
@@ -19,11 +19,14 @@
     />
     <meta
       property="og:description"
-      content="Portfolio of I Gede Kasuma Dana. Full-stack web engineering, client-side computer vision interfaces, and applied AI systems."
+      content="Portfolio of I Gede Kasuma Dana, studying Software Engineering at SMK Negeri 1 Denpasar."
     />
-    <meta property="og:image" content="assets/profile.webp" />
+    <meta
+      property="og:image"
+      content="https://me.kasuma.id/assets/profile.webp"
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.kasuma.id/" />
+    <meta property="og:url" content="https://me.kasuma.id/" />
 
     <!-- Twitter Card Metadata -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -33,39 +36,23 @@
     />
     <meta
       name="twitter:description"
-      content="Portfolio of I Gede Kasuma Dana. Full-stack web engineering, client-side computer vision interfaces, and applied AI systems."
+      content="Portfolio of I Gede Kasuma Dana, studying Software Engineering at SMK Negeri 1 Denpasar."
     />
-    <meta name="twitter:image" content="assets/profile.webp" />
-
-    <!-- Structured Data (Schema.org Person) -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "I Gede Kasuma Dana",
-        "url": "https://www.kasuma.id/",
-        "image": "https://www.kasuma.id/assets/profile.webp",
-        "jobTitle": "Software Engineering Student",
-        "alumniOf": "SMK Negeri 1 Denpasar",
-        "knowsAbout": [
-          "Full-Stack Development",
-          "React",
-          "Next.js",
-          "Laravel",
-          "Computer Vision",
-          "Applied Machine Learning"
-        ],
-        "sameAs": [
-          "https://github.com/kasumadana",
-          "https://www.linkedin.com/in/kasumadana/"
-        ]
-      }
-    </script>
+    <meta
+      name="twitter:image"
+      content="https://me.kasuma.id/assets/profile.webp"
+    />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="star.svg" />
+    <link rel="icon" type="image/svg+xml" href="assets/star.svg" />
+    <link
+      rel="alternate"
+      type="text/markdown"
+      href="/llms.txt"
+      title="LLM Context"
+    />
 
-    <!-- Non-Blocking Typography Preload & Stylesheet -->
+    <!-- Typography (Preload & Non-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -88,7 +75,6 @@
 
     <!-- Tailwind CSS Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
     <script>
       tailwind.config = {
         theme: {
@@ -109,6 +95,50 @@
           },
         },
       };
+    </script>
+
+    <!-- Structured Data (Schema.org ProfilePage + Person) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ProfilePage",
+            "@id": "https://me.kasuma.id/#profile",
+            "url": "https://me.kasuma.id/",
+            "name": "I Gede Kasuma Dana Portfolio",
+            "isPartOf": {
+              "@type": "WebSite",
+              "@id": "https://me.kasuma.id/#website",
+              "url": "https://me.kasuma.id/",
+              "name": "Kasuma Dana"
+            },
+            "about": {
+              "@id": "https://me.kasuma.id/#person"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://me.kasuma.id/#person",
+            "name": "I Gede Kasuma Dana",
+            "alternateName": "Kasuma Dana",
+            "url": "https://me.kasuma.id/",
+            "image": "https://me.kasuma.id/assets/profile.webp",
+            "jobTitle": "Software Engineering Student",
+            "alumniOf": "SMK Negeri 1 Denpasar",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Denpasar",
+              "addressRegion": "Bali",
+              "addressCountry": "ID"
+            },
+            "sameAs": [
+              "https://github.com/kasumadana",
+              "https://www.linkedin.com/in/kasumadana/"
+            ]
+          }
+        ]
+      }
     </script>
 
     <style type="text/css">
@@ -157,7 +187,6 @@
         aspect-ratio: 3 / 4;
       }
 
-      /* Stabilisasi Wadah Judul Hero untuk Mencegah CLS */
       #hero-title {
         min-height: clamp(3rem, 12vw, 10rem);
       }
@@ -281,7 +310,7 @@
       </div>
     </header>
 
-    <!-- Bagian Hero -->
+    <!-- Hero Section (Teks Featured Capstone Project telah dihapus) -->
     <section
       id="home"
       class="sticky top-0 z-0 w-full h-screen bg-[#111111] flex flex-col justify-between overflow-hidden"
@@ -316,7 +345,7 @@
 
       <div
         id="hero-content"
-        class="relative z-10 w-full px-4 sm:px-8 md:px-12 pt-28 sm:pt-32 text-canvas"
+        class="relative z-10 w-full px-4 sm:px-8 md:px-12 pt-32 sm:pt-36 text-canvas"
       >
         <div class="max-w-xl md:max-w-2xl space-y-4">
           <h2
@@ -368,7 +397,7 @@
       id="content"
       class="w-full relative z-10 bg-canvas border-t border-ink shadow-[0_-20px_50px_rgba(0,0,0,0.35)]"
     >
-      <!-- Daftar Proyek -->
+      <!-- Selected Works Section -->
       <section
         id="works"
         class="py-20 sm:py-28 px-4 sm:px-8 md:px-12 border-b border-lightGray"
@@ -393,7 +422,7 @@
           id="projects-grid"
           class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20 md:gap-y-28"
         >
-          <!-- Proyek 01 -->
+          <!-- Proyek 01: Aksa -->
           <article
             class="project-card flex flex-col space-y-6 transition-state group"
           >
@@ -486,7 +515,7 @@
             </div>
           </article>
 
-          <!-- Proyek 02 -->
+          <!-- Proyek 02: TaruPramana -->
           <article
             class="project-card flex flex-col space-y-6 md:mt-24 transition-state group"
           >
@@ -578,7 +607,7 @@
             </div>
           </article>
 
-          <!-- Proyek 03 -->
+          <!-- Proyek 03: Renty -->
           <article
             class="project-card flex flex-col space-y-6 transition-state group"
           >
@@ -669,7 +698,7 @@
             </div>
           </article>
 
-          <!-- Proyek 04 -->
+          <!-- Proyek 04: Rare Angon -->
           <article
             class="project-card flex flex-col space-y-6 md:mt-24 transition-state group"
           >
@@ -762,7 +791,7 @@
         </div>
       </section>
 
-      <!-- Profil & Tentang Diri -->
+      <!-- About Section (Foto Profil Terpasang Efek Radial Hover Halus) -->
       <section
         id="about"
         class="py-20 sm:py-28 px-4 sm:px-8 md:px-12 border-b border-lightGray"
@@ -771,16 +800,19 @@
           class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start"
         >
           <div class="lg:col-span-5 space-y-8">
-            <div class="border border-ink p-3 bg-canvas group">
+            <div
+              class="profile-visual-box border border-ink p-3 bg-canvas group cursor-pointer relative overflow-hidden"
+            >
               <div
                 class="aspect-3-4 overflow-hidden relative bg-lightGray select-none"
               >
+                <!-- Base Grayscale Image -->
                 <img
                   src="assets/profile.webp"
                   alt="Portrait of I Gede Kasuma Dana"
                   width="600"
                   height="800"
-                  class="w-full h-full object-cover grayscale contrast-[105%] group-hover:grayscale-0 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                  class="w-full h-full object-cover filter grayscale contrast-[105%]"
                   onerror="
                     this.src =
                       'https://placehold.co/600x800/111/fff?text=Kasuma+Dana'
@@ -788,9 +820,17 @@
                   loading="lazy"
                   decoding="async"
                 />
-                <div
-                  class="absolute inset-0 bg-ink/10 mix-blend-multiply opacity-100 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none"
-                ></div>
+                <!-- Radial Color Reveal Layer -->
+                <img
+                  src="assets/profile.webp"
+                  alt=""
+                  width="600"
+                  height="800"
+                  aria-hidden="true"
+                  class="project-color-reveal absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
               <div
                 class="flex justify-between items-center mt-3 text-xs text-mediumGray font-rework"
@@ -819,17 +859,18 @@
             <h2
               class="text-2xl sm:text-3xl md:text-4xl font-light font-avec-sharp leading-snug"
             >
-              Building reliable web software with modular logic, responsive
-              layouts, and applied AI.
+              Software engineering student focused on modular web applications
+              and applied machine learning.
             </h2>
 
             <p
               class="text-base leading-relaxed text-ink font-light font-avec-sharp"
             >
-              I study Software Engineering at SMK Negeri 1 Denpasar, Bali. My
-              technical focus spans full-stack web applications, client-side
-              computer vision interfaces, and reliable database architectures.
-              My commitment to systematic development has earned back-to-back
+              I am a Software Engineering student at SMK Negeri 1 Denpasar,
+              Bali. My practical focus spans full-stack web applications,
+              client-side computer vision interfaces, and structured database
+              design. My commitment to systematic learning has earned
+              back-to-back
               <strong class="font-semibold text-ink"
                 >Distinction Graduate honors at Coding Camp powered by DBS
                 Foundation &amp; Dicoding (2025 and 2026)</strong
@@ -839,9 +880,9 @@
             <p class="text-sm text-mediumGray leading-relaxed font-rework">
               I prioritize clean state boundaries, type safety, predictable API
               communication, and accessible interface design. Whether delivering
-              as a sole engineer or collaborating within multi-disciplinary
-              teams, I focus on solving concrete technical problems with
-              maintainable implementations.
+              course projects individually or collaborating within student
+              development teams, I focus on solving concrete technical problems
+              with maintainable implementations.
             </p>
 
             <div class="pt-8 border-t border-lightGray">
@@ -922,7 +963,7 @@
         </div>
       </section>
 
-      <!-- Kredensial & Penghargaan -->
+      <!-- Credentials Section -->
       <section
         id="credentials"
         class="py-20 sm:py-28 px-4 sm:px-8 md:px-12 border-b border-lightGray"
@@ -1138,7 +1179,7 @@
         </div>
       </section>
 
-      <!-- Saluran Kontak Langsung -->
+      <!-- Contact Section -->
       <section
         id="contact"
         class="py-20 sm:py-28 px-4 sm:px-8 md:px-12 bg-canvas pb-32 sm:pb-36"
@@ -1147,8 +1188,8 @@
           <h2
             class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-light font-avec-sharp leading-tight text-ink"
           >
-            Open for software engineering internships, contract development, and
-            technical collaboration.
+            Open for software engineering internships, technical
+            apprenticeships, and collaborative student projects.
           </h2>
 
           <div class="pt-2 sm:pt-4 space-y-4">
@@ -1159,7 +1200,6 @@
               >
                 contact@kasuma.id ↗
               </a>
-              <!-- Perbaikan Aksesibilitas WCAG 2.5.3: Label selaras dengan teks tombol -->
               <button
                 type="button"
                 id="copyEmailBtn"
@@ -1224,7 +1264,7 @@
                 >Canonical Domain</span
               >
               <a
-                href="https://www.kasuma.id/"
+                href="https://me.kasuma.id/"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="text-sm font-semibold hover:underline"
@@ -1236,14 +1276,16 @@
               <span class="text-xs text-mediumGray font-rework block"
                 >Status</span
               >
-              <span class="text-sm font-semibold text-ink">Available</span>
+              <span class="text-sm font-semibold text-ink"
+                >Student Available 2026</span
+              >
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Skrip Pustaka Eksternal dengan Penanganan Non-Blocking -->
+    <!-- Skrip Pustaka Non-Blocking -->
     <script
       src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"
       crossorigin="anonymous"
@@ -1260,7 +1302,7 @@
       defer
     ></script>
 
-    <!-- Logika Antarmuka Pengguna -->
+    <!-- Logika Antarmuka Pengguna & GSAP Tweening Halus -->
     <script type="text/javascript">
       function copyEmailAddress() {
         navigator.clipboard.writeText("contact@kasuma.id").then(() => {
@@ -1276,9 +1318,12 @@
       }
 
       function initRadialReveal() {
-        const cards = document.querySelectorAll(".project-visual-link");
+        // Ambil kartu proyek dan kartu profil visual
+        const targets = document.querySelectorAll(
+          ".project-visual-link, .profile-visual-box",
+        );
 
-        cards.forEach((card) => {
+        targets.forEach((card) => {
           const colorImg = card.querySelector(".project-color-reveal");
           if (!colorImg) return;
 
@@ -1302,8 +1347,8 @@
             if (typeof gsap !== "undefined") {
               const proxy = { r: parseFloat(colorImg.dataset.r || 0) };
               anim = gsap.to(proxy, {
-                r: maxRadius + 30,
-                duration: 0.65,
+                r: maxRadius + 40,
+                duration: 0.85,
                 ease: "power2.out",
                 onUpdate: () => {
                   colorImg.dataset.r = proxy.r;
@@ -1328,7 +1373,7 @@
               const proxy = { r: parseFloat(colorImg.dataset.r || 0) };
               anim = gsap.to(proxy, {
                 r: 0,
-                duration: 0.45,
+                duration: 0.6,
                 ease: "power2.inOut",
                 onUpdate: () => {
                   colorImg.dataset.r = proxy.r;
