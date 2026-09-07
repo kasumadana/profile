@@ -1,243 +1,1414 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I Gede Kasuma Dana | Software Engineering Student</title>
     <meta
       name="description"
-      content="Profile of I Gede Kasuma Dana, a software engineering student and tech enthusiast from Bali."
-    />
-    <meta
-      name="keywords"
-      content="Kasuma Dana, software engineering, student, Bali, portfolio, contact"
+      content="Personal portfolio of I Gede Kasuma Dana, full-stack software engineer and applied AI developer based in Bali."
     />
     <meta name="author" content="I Gede Kasuma Dana" />
-    <meta name="theme-color" content="#8a2be2" />
-    <link rel="apple-touch-icon" href="assets/icons/K.png" sizes="180x180" />
-    <title>Kasuma Dana</title>
-    <link rel="icon" href="assets/icons/K.png" sizes="512x512" />
-    <link rel="stylesheet" href="assets/styles/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
+    <link rel="canonical" href="https://www.kasuma.id/" />
+
+    <!-- OpenGraph Metadata -->
+    <meta property="og:site_name" content="Kasuma Dana" />
+    <meta
+      property="og:title"
+      content="I Gede Kasuma Dana | Software Engineering Student"
     />
+    <meta
+      property="og:description"
+      content="Portfolio of I Gede Kasuma Dana. Full-stack web engineering, client-side computer vision interfaces, and applied AI systems."
+    />
+    <meta property="og:image" content="assets/profile.webp" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.kasuma.id/" />
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="I Gede Kasuma Dana | Software Engineering Student"
+    />
+    <meta
+      name="twitter:description"
+      content="Portfolio of I Gede Kasuma Dana. Full-stack web engineering, client-side computer vision interfaces, and applied AI systems."
+    />
+    <meta name="twitter:image" content="assets/profile.webp" />
+
+    <!-- Structured Data (Schema.org Person) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "I Gede Kasuma Dana",
+        "url": "https://www.kasuma.id/",
+        "image": "https://www.kasuma.id/assets/profile.webp",
+        "jobTitle": "Software Engineering Student",
+        "alumniOf": "SMK Negeri 1 Denpasar",
+        "knowsAbout": [
+          "Full-Stack Development",
+          "React",
+          "Next.js",
+          "Laravel",
+          "Computer Vision",
+          "Applied Machine Learning"
+        ],
+        "sameAs": [
+          "https://github.com/kasumadana",
+          "https://www.linkedin.com/in/kasumadana/"
+        ]
+      }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="star.svg" />
+
+    <!-- Non-Blocking Typography Preload & Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..400&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&family=Syne:wght@700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..400&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&family=Syne:wght@700;800&display=swap"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..400&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&family=Syne:wght@700;800&display=swap"
+      />
+    </noscript>
+
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              canvas: "#ffffff",
+              ink: "#111111",
+              mediumGray: "#525252",
+              lightGray: "#e5e5e5",
+              fadedGray: "#737373",
+            },
+            fontFamily: {
+              onsite: ["Inter", "sans-serif"],
+              "avec-sharp": ["Fraunces", "serif"],
+              ceno: ["Syne", "sans-serif"],
+              rework: ["Space Grotesk", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/css">
+      * {
+        border-radius: 0px !important;
+        box-shadow: none !important;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      html.lenis,
+      html.lenis body {
+        height: auto;
+      }
+
+      .lenis.lenis-smooth {
+        scroll-behavior: auto !important;
+      }
+
+      .lenis.lenis-smooth [data-lenis-prevent] {
+        overscroll-behavior: contain;
+      }
+
+      .lenis.lenis-stopped {
+        overflow: hidden;
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #ffffff;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #111111;
+      }
+
+      .transition-state {
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .aspect-16-10 {
+        aspect-ratio: 16 / 10;
+      }
+
+      .aspect-3-4 {
+        aspect-ratio: 3 / 4;
+      }
+
+      /* Stabilisasi Wadah Judul Hero untuk Mencegah CLS */
+      #hero-title {
+        min-height: clamp(3rem, 12vw, 10rem);
+      }
+
+      /* Masking Warna Radial */
+      .project-color-reveal {
+        --x: 50%;
+        --y: 50%;
+        --r: 0px;
+        pointer-events: none;
+        -webkit-mask-image: radial-gradient(
+          circle var(--r) at var(--x) var(--y),
+          #000 0%,
+          #000 95%,
+          transparent 100%
+        );
+        mask-image: radial-gradient(
+          circle var(--r) at var(--x) var(--y),
+          #000 0%,
+          #000 95%,
+          transparent 100%
+        );
+        will-change:
+          mask-image,
+          -webkit-mask-image;
+      }
+
+      @media (hover: none) {
+        .project-color-reveal {
+          -webkit-mask-image: none !important;
+          mask-image: none !important;
+          opacity: 0.95;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        ::before,
+        ::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
   </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="#landing" class="logo">
-          <img src="assets/icons/kasumadana.png" alt="Kasuma Dana Logo" />
-        </a>
-        <ul class="nav-menu">
-          <li><a href="#about" class="nav-link">About Me</a></li>
-          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Landing Section -->
-    <section id="landing" class="landing">
-      <div class="hero-content fade-in">
-        <h1 class="hero-title">Welcome to My Profile</h1>
-        <p class="hero-subtitle">
-          Software Engineering Student & Tech Enthusiast
-        </p>
-        <a href="#about" class="cta-button">Get to Know Me</a>
-      </div>
-      <div class="hero-image fade-in">
-        <img src="assets/images/ProfilKasuma.jpg" alt="Kasuma Dana" />
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-      <h2 class="section-title fade-in">About Me</h2>
-      <div class="about-content fade-in">
-        <p>
-          Hello, my name is I Gede Kasuma Dana, though most people call me
-          Kasuma. I'm a student at SMK Negeri 1 Denpasar majoring in Software
-          Development (RPL) and a graduate of the Coding Camp by DBS Foundation
-          2025, where I participated in the Front-end Back-end learning path.
-          Born and raised in this vibrant city, I have always been passionate
-          about technology, and I also enjoy photography, capturing life's
-          interesting moments as a hobby.
-        </p>
-        <p>
-          One of my most memorable experiences occurred when I was in the 2nd
-          grade. I had the rare opportunity to perform at the Bali Arts
-          Festival. Stepping onto the stage at the Art Center in Ardha Candra
-          with my art group, Sanggar Drupadi, and the music ensemble Palawara
-          opened my eyes to the beauty of the arts and ignited a creative spark
-          that I continue to nurture. Conversely, the passing of my
-          great-grandparents was a profoundly sorrowful event, especially losing
-          my great-grandfather, a cherished figure who always accompanied me as
-          I played musical instruments in our village. This experience taught me
-          the importance of cherishing every moment with our loved ones.
-        </p>
-        <p>
-          Throughout my educational journey, I actively participated in the
-          Spensix Multimedia Computer Club, where I honed my skills in Microsoft
-          Word. During this time, I achieved several accolades, such as winning
-          competitions at Alfa Prima and a local high school event, earning
-          recognition in a quiz contest organized by FAD Denpasar, and excelling
-          in an essay contest held by Bank BPD Bali. In the 8th grade, I was
-          entrusted with the role of Microsoft Word coordinator and later served
-          as the Vice Chairman of the club. Without this involvement, I might
-          never have developed the interest in software engineering that has
-          defined my educational path.
-        </p>
-        <p>
-          Looking ahead, I aspire to continue developing my potential. After
-          completing my vocational education, I plan to further my studies in
-          Informatics Engineering at Politeknik Negeri Bali, while also pursuing
-          part-time work to gain additional experience in the ever-evolving
-          world of technology.
-        </p>
-      </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-      <h2 class="section-title fade-in">Portfolio</h2>
-      <div class="portfolio-carousel fade-in">
-        <div class="portfolio-container" id="portfolioContainer">
-          <div class="portfolio-item">
-            <img src="assets/images/BaliAga.jpg" alt="Website Preview" />
-            <div class="portfolio-content">
-              <h3>Bali Aga</h3>
-              <p>
-                An educational Android app that unveils the richness of Bali Aga
-                culture through interactive and engaging experiences.
-              </p>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <img src="assets/images/CuanCerdas.jpg" alt="Website Preview" />
-            <div class="portfolio-content">
-              <h3>CuanCerdas</h3>
-              <p>
-                An innovative educational platform that combines financial
-                articles, daily expense tracking, and spending analysis to
-                empower teenagers to manage their finances smartly.
-              </p>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <iframe
-              src="https://scratch.mit.edu/projects/1104527429/embed"
-              allowtransparency="true"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen
-            ></iframe>
-            <div class="portfolio-content">
-              <h3>Perang Pandan</h3>
-              <p>
-                A simple Scratch project simulating the traditional Perang
-                Pandan game that digitally captures the cultural essence of
-                Bali.
-              </p>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <img src="assets/images/Photography.jpg" alt="Photography" />
-            <div class="portfolio-content">
-              <h3>Photography</h3>
-              <p>
-                A curated collection of outstanding photographs that capture the
-                natural beauty and cultural diversity of Bali.
-              </p>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <img
-              src="assets/images/TengananPegringsingan.jpg"
-              alt="Website Preview"
-            />
-            <div class="portfolio-content">
-              <h3>Tenganan Pegringsingan</h3>
-              <p>
-                A captivating website that spotlights the charm and uniqueness
-                of Tenganan Village, featuring engaging narratives, historical
-                insights, and local traditions.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-controls">
-          <button class="carousel-btn" id="prevBtn">❮</button>
-          <button class="carousel-btn" id="nextBtn">❯</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <h2 class="section-title fade-in">Contact</h2>
-      <p
-        style="
-          text-align: center;
-          margin-bottom: 2rem;
-          color: var(--text-secondary);
-        "
-        class="fade-in"
+  <body
+    class="bg-canvas text-ink font-onsite min-h-screen selection:bg-ink selection:text-canvas relative overflow-x-hidden"
+  >
+    <!-- Navigasi Utama -->
+    <header
+      class="fixed top-0 left-0 w-full h-[70px] md:h-[75px] z-50 flex items-center justify-between px-4 sm:px-8 md:px-12 text-canvas mix-blend-difference pointer-events-auto"
+      aria-label="Primary Navigation"
+    >
+      <a
+        href="#home"
+        class="font-semibold text-xs tracking-[0.2em] font-rework hover:text-mediumGray transition-state uppercase py-2 focus-visible:outline-dashed focus-visible:outline-1"
       >
-        You can contact me through the following:
-      </p>
-      <div class="contact-grid fade-in">
+        Kasuma Dana
+      </a>
+
+      <div class="flex items-center gap-4 sm:gap-6 md:gap-10">
+        <nav aria-label="Sections">
+          <ul
+            class="flex items-center gap-3 sm:gap-6 md:gap-8 text-[11px] sm:text-xs uppercase tracking-wider font-rework"
+          >
+            <li>
+              <a
+                href="#works"
+                class="hover:text-mediumGray border-b border-transparent hover:border-canvas pb-0.5 transition-state py-2"
+                >Works</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="hover:text-mediumGray border-b border-transparent hover:border-canvas pb-0.5 transition-state py-2"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#credentials"
+                class="hover:text-mediumGray border-b border-transparent hover:border-canvas pb-0.5 transition-state py-2"
+                >Credentials</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="hover:text-mediumGray border-b border-transparent hover:border-canvas pb-0.5 transition-state py-2"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+
         <a
-          href="mailto:kasumadana06@gmail.com"
-          class="contact-card"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="assets/resume.pdf"
+          download="Resume_I_Gede_Kasuma_Dana.pdf"
+          class="hidden sm:inline-flex items-center gap-2 border border-canvas/70 px-3.5 py-1.5 text-xs uppercase tracking-wider font-rework hover:bg-canvas hover:text-ink transition-state min-h-[40px]"
+          title="Download PDF Resume"
         >
-          <img src="assets/icons/gmail.png" alt="Email" />
-          <p>kasumadana06@gmail.com</p>
+          <span>Resume (PDF)</span>
+          <svg
+            class="w-3 h-3"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M7 10l5 5m0 0l5-5m-5 5V3"
+            />
+          </svg>
         </a>
-        <a
-          href="https://github.com/kasumadana"
-          class="contact-card"
-          target="_blank"
-          rel="noopener noreferrer"
+      </div>
+    </header>
+
+    <!-- Bagian Hero -->
+    <section
+      id="home"
+      class="sticky top-0 z-0 w-full h-screen bg-[#111111] flex flex-col justify-between overflow-hidden"
+      style="
+        background: radial-gradient(
+          circle at 50% 30%,
+          #1d1d1d 0%,
+          #111111 100%
+        );
+      "
+      aria-label="Hero Introduction"
+    >
+      <div
+        id="hero-bg"
+        class="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden"
+      >
+        <img
+          src="assets/nature.webp"
+          alt="Atmospheric Landscape Background"
+          width="1920"
+          height="1080"
+          fetchpriority="high"
+          loading="eager"
+          decoding="async"
+          onerror="this.style.display = 'none'"
+          class="w-full h-full object-cover opacity-60 mix-blend-screen scale-105"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-transparent via-[#111111]/30 to-[#111111]/90"
+        ></div>
+      </div>
+
+      <div
+        id="hero-content"
+        class="relative z-10 w-full px-4 sm:px-8 md:px-12 pt-28 sm:pt-32 text-canvas"
+      >
+        <div class="max-w-xl md:max-w-2xl space-y-4">
+          <h2
+            class="text-3xl sm:text-4xl md:text-5xl font-light font-avec-sharp tracking-tight text-canvas"
+          >
+            TaruPramana
+          </h2>
+          <p
+            class="text-sm sm:text-base text-canvas/85 leading-relaxed font-rework"
+          >
+            A web application translating classical Balinese palm-leaf herbal
+            manuscripts into a structured relational database. Built with React,
+            Express.js, and OpenAI API integration. Awarded Best Capstone
+            Project at Coding Camp DBS Foundation 2026.
+          </p>
+
+          <div class="pt-3 flex flex-wrap gap-4">
+            <a
+              href="#works"
+              class="inline-flex items-center gap-2 border border-canvas px-5 py-2.5 text-xs uppercase tracking-wider font-rework hover:bg-canvas hover:text-ink transition-state min-h-[44px]"
+            >
+              Explore Works ↓
+            </a>
+            <a
+              href="assets/resume.pdf"
+              download="Resume_I_Gede_Kasuma_Dana.pdf"
+              class="inline-flex items-center gap-2 border border-canvas/50 px-5 py-2.5 text-xs uppercase tracking-wider font-rework hover:border-canvas hover:bg-canvas hover:text-ink transition-state sm:hidden min-h-[44px]"
+            >
+              Resume (PDF) ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="hero-title"
+        class="relative z-10 w-full px-4 md:px-10 pb-6 pointer-events-none select-none flex items-center justify-center"
+      >
+        <h1
+          class="text-[clamp(2.8rem,10vw,7rem)] leading-none font-black tracking-tighter text-canvas text-center font-ceno opacity-95"
         >
-          <img src="assets/icons/github.png" alt="GitHub" />
-          <p>@kasumadana</p>
-        </a>
-        <a
-          href="https://instagram.com/kasumadana"
-          class="contact-card"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="assets/icons/instagram.png" alt="Instagram" />
-          <p>@kasumadana</p>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/kasumadana/"
-          class="contact-card"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="assets/icons/linkedin.png" alt="LinkedIn" />
-          <p>I Gede Kasuma Dana</p>
-        </a>
+          KASUMADANA
+        </h1>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <a href="#contact">
-        <img src="assets/icons/K2.png" alt="Kasuma Dana Logo" />
-      </a>
-    </footer>
+    <!-- Konten Utama -->
+    <main
+      id="content"
+      class="w-full relative z-10 bg-canvas border-t border-ink shadow-[0_-20px_50px_rgba(0,0,0,0.35)]"
+    >
+      <!-- Daftar Proyek -->
+      <section
+        id="works"
+        class="py-20 sm:py-28 px-4 sm:px-8 md:px-12 border-b border-lightGray"
+      >
+        <div
+          class="flex justify-between items-baseline border-b border-ink pb-4 mb-16 md:mb-24"
+        >
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl font-normal font-rework tracking-tight uppercase"
+          >
+            Selected Works
+          </h2>
+          <span
+            class="text-xs font-mono uppercase text-mediumGray"
+            id="works-counter"
+          >
+            [Total: 04 Projects]
+          </span>
+        </div>
 
-    <script src="assets/scripts/main.js"></script>
+        <div
+          id="projects-grid"
+          class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20 md:gap-y-28"
+        >
+          <!-- Proyek 01 -->
+          <article
+            class="project-card flex flex-col space-y-6 transition-state group"
+          >
+            <a
+              href="https://aksa.kasuma.id"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-visual-link block border border-ink p-3 bg-canvas relative overflow-hidden cursor-pointer"
+              title="Open live project: Aksa"
+              aria-label="Launch live deployment of Aksa"
+            >
+              <div
+                class="aspect-16-10 overflow-hidden relative bg-lightGray select-none"
+              >
+                <img
+                  src="assets/aksa.webp"
+                  alt="Aksa: Adaptive Kinesthetic Learning Platform"
+                  width="800"
+                  height="500"
+                  class="w-full h-full object-cover filter grayscale contrast-[105%]"
+                  onerror="
+                    this.src =
+                      'https://placehold.co/960x600/111/fff?text=Aksa+Preview'
+                  "
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  src="assets/aksa.webp"
+                  alt=""
+                  width="800"
+                  height="500"
+                  aria-hidden="true"
+                  class="project-color-reveal absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div
+                  class="absolute top-3 right-3 w-7 h-7 bg-ink text-canvas flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                >
+                  ↗
+                </div>
+              </div>
+            </a>
+            <div class="space-y-4">
+              <div
+                class="flex justify-between items-baseline border-b border-lightGray pb-2"
+              >
+                <span class="text-xs uppercase text-mediumGray font-rework"
+                  >Applied Computer Vision &amp; AI</span
+                >
+                <span class="text-xs font-mono text-mediumGray">#01</span>
+              </div>
+              <h3
+                class="text-xl sm:text-2xl font-light font-avec-sharp text-ink"
+              >
+                <a
+                  href="https://aksa.kasuma.id"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:text-mediumGray transition-state inline-flex items-baseline gap-1"
+                >
+                  <span>Aksa: Adaptive Kinesthetic Learning Platform</span>
+                  <span class="text-xs font-rework opacity-60">↗</span>
+                </a>
+              </h3>
+              <div
+                class="inline-flex items-center gap-2 border border-ink/20 px-2.5 py-1 text-xs font-rework text-ink bg-lightGray/30"
+              >
+                <span class="font-semibold uppercase tracking-wider text-[10px]"
+                  >Role:</span
+                >
+                <span>Full Stack Developer</span>
+              </div>
+              <p
+                class="text-xs md:text-sm text-mediumGray leading-relaxed font-rework"
+              >
+                A touch-free interactive educational platform driven by
+                real-time hand-gesture recognition and conversational Voice AI.
+                Users navigate modular course syllabi and answer interactive
+                quizzes directly in the browser via webcam input.
+              </p>
+              <div class="text-xs text-ink font-semibold font-rework">
+                Stack:
+                <span class="font-normal text-mediumGray"
+                  >Next.js, TypeScript, MediaPipe Vision, Tailwind CSS,
+                  Supabase</span
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyek 02 -->
+          <article
+            class="project-card flex flex-col space-y-6 md:mt-24 transition-state group"
+          >
+            <a
+              href="https://www.tarupramana.web.id"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-visual-link block border border-ink p-3 bg-canvas relative overflow-hidden cursor-pointer"
+              title="Open live project: TaruPramana"
+              aria-label="Launch live deployment of TaruPramana"
+            >
+              <div
+                class="aspect-16-10 overflow-hidden relative bg-lightGray select-none"
+              >
+                <img
+                  src="assets/tarupramana.webp"
+                  alt="TaruPramana Botanical Engine"
+                  width="800"
+                  height="500"
+                  class="w-full h-full object-cover filter grayscale contrast-[105%]"
+                  onerror="
+                    this.src =
+                      'https://placehold.co/960x600/111/fff?text=TaruPramana+Preview'
+                  "
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  src="assets/tarupramana.webp"
+                  alt=""
+                  width="800"
+                  height="500"
+                  aria-hidden="true"
+                  class="project-color-reveal absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div
+                  class="absolute top-3 right-3 w-7 h-7 bg-ink text-canvas flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                >
+                  ↗
+                </div>
+              </div>
+            </a>
+            <div class="space-y-4">
+              <div
+                class="flex justify-between items-baseline border-b border-lightGray pb-2"
+              >
+                <span class="text-xs uppercase text-mediumGray font-rework"
+                  >Best Capstone Project, DBS Foundation 2026</span
+                >
+                <span class="text-xs font-mono text-mediumGray">#02</span>
+              </div>
+              <h3
+                class="text-xl sm:text-2xl font-light font-avec-sharp text-ink"
+              >
+                <a
+                  href="https://www.tarupramana.web.id"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:text-mediumGray transition-state inline-flex items-baseline gap-1"
+                >
+                  <span>TaruPramana</span>
+                  <span class="text-xs font-rework opacity-60">↗</span>
+                </a>
+              </h3>
+              <div
+                class="inline-flex items-center gap-2 border border-ink/20 px-2.5 py-1 text-xs font-rework text-ink bg-lightGray/30"
+              >
+                <span class="font-semibold uppercase tracking-wider text-[10px]"
+                  >Role:</span
+                >
+                <span>Project Manager &amp; System Architect</span>
+              </div>
+              <p
+                class="text-xs md:text-sm text-mediumGray leading-relaxed font-rework"
+              >
+                An AI-assisted botanical recommendation system parsing
+                centuries-old Balinese Taru Pramana lontar manuscripts into a
+                normalized relational format, enabling instant symptom-to-remedy
+                queries.
+              </p>
+              <div class="text-xs text-ink font-semibold font-rework">
+                Stack:
+                <span class="font-normal text-mediumGray"
+                  >React, Express.js, OpenAI API, Tailwind CSS</span
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyek 03 -->
+          <article
+            class="project-card flex flex-col space-y-6 transition-state group"
+          >
+            <a
+              href="https://renty.kasuma.id"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-visual-link block border border-ink p-3 bg-canvas relative overflow-hidden cursor-pointer"
+              title="Open live project: Renty"
+              aria-label="Launch live deployment of Renty"
+            >
+              <div
+                class="aspect-16-10 overflow-hidden relative bg-lightGray select-none"
+              >
+                <img
+                  src="assets/renty.webp"
+                  alt="Renty Property SaaS Platform"
+                  width="800"
+                  height="500"
+                  class="w-full h-full object-cover filter grayscale contrast-[105%]"
+                  onerror="
+                    this.src =
+                      'https://placehold.co/960x600/111/fff?text=Renty+Preview'
+                  "
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  src="assets/renty.webp"
+                  alt=""
+                  width="800"
+                  height="500"
+                  aria-hidden="true"
+                  class="project-color-reveal absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div
+                  class="absolute top-3 right-3 w-7 h-7 bg-ink text-canvas flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                >
+                  ↗
+                </div>
+              </div>
+            </a>
+            <div class="space-y-4">
+              <div
+                class="flex justify-between items-baseline border-b border-lightGray pb-2"
+              >
+                <span class="text-xs uppercase text-mediumGray font-rework"
+                  >Property Management &amp; SaaS</span
+                >
+                <span class="text-xs font-mono text-mediumGray">#03</span>
+              </div>
+              <h3
+                class="text-xl sm:text-2xl font-light font-avec-sharp text-ink"
+              >
+                <a
+                  href="https://renty.kasuma.id"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:text-mediumGray transition-state inline-flex items-baseline gap-1"
+                >
+                  <span>Renty</span>
+                  <span class="text-xs font-rework opacity-60">↗</span>
+                </a>
+              </h3>
+              <div
+                class="inline-flex items-center gap-2 border border-ink/20 px-2.5 py-1 text-xs font-rework text-ink bg-lightGray/30"
+              >
+                <span class="font-semibold uppercase tracking-wider text-[10px]"
+                  >Role:</span
+                >
+                <span>Backend Developer</span>
+              </div>
+              <p
+                class="text-xs md:text-sm text-mediumGray leading-relaxed font-rework"
+              >
+                A multi-tenant property management platform automating lease
+                agreements, payment verification with Midtrans gateway
+                integration, and financial ledger consolidation.
+              </p>
+              <div class="text-xs text-ink font-semibold font-rework">
+                Stack:
+                <span class="font-normal text-mediumGray"
+                  >Laravel, MySQL, Midtrans API, Tailwind CSS, React</span
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyek 04 -->
+          <article
+            class="project-card flex flex-col space-y-6 md:mt-24 transition-state group"
+          >
+            <a
+              href="https://rareangon.kasuma.id"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-visual-link block border border-ink p-3 bg-canvas relative overflow-hidden cursor-pointer"
+              title="Open live project: Rare Angon"
+              aria-label="Launch live deployment of Rare Angon"
+            >
+              <div
+                class="aspect-16-10 overflow-hidden relative bg-lightGray select-none"
+              >
+                <img
+                  src="assets/rareangon.webp"
+                  alt="Rare Angon: The Sky Runner"
+                  width="800"
+                  height="500"
+                  class="w-full h-full object-cover filter grayscale contrast-[105%]"
+                  onerror="
+                    this.src =
+                      'https://placehold.co/960x600/111/fff?text=Rare+Angon+Preview'
+                  "
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
+                  src="assets/rareangon.webp"
+                  alt=""
+                  width="800"
+                  height="500"
+                  aria-hidden="true"
+                  class="project-color-reveal absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div
+                  class="absolute top-3 right-3 w-7 h-7 bg-ink text-canvas flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                >
+                  ↗
+                </div>
+              </div>
+            </a>
+            <div class="space-y-4">
+              <div
+                class="flex justify-between items-baseline border-b border-lightGray pb-2"
+              >
+                <span class="text-xs uppercase text-mediumGray font-rework"
+                  >Gesture-Controlled Web Game</span
+                >
+                <span class="text-xs font-mono text-mediumGray">#04</span>
+              </div>
+              <h3
+                class="text-xl sm:text-2xl font-light font-avec-sharp text-ink"
+              >
+                <a
+                  href="https://rareangon.kasuma.id"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:text-mediumGray transition-state inline-flex items-baseline gap-1"
+                >
+                  <span>Rare Angon: The Sky Runner</span>
+                  <span class="text-xs font-rework opacity-60">↗</span>
+                </a>
+              </h3>
+              <div
+                class="inline-flex items-center gap-2 border border-ink/20 px-2.5 py-1 text-xs font-rework text-ink bg-lightGray/30"
+              >
+                <span class="font-semibold uppercase tracking-wider text-[10px]"
+                  >Role:</span
+                >
+                <span>Game &amp; Creative Developer</span>
+              </div>
+              <p
+                class="text-xs md:text-sm text-mediumGray leading-relaxed font-rework"
+              >
+                A 2D web arcade game celebrating Balinese kite culture,
+                controlled via real-time skeletal hand tracking on standard
+                webcams without external controllers.
+              </p>
+              <div class="text-xs text-ink font-semibold font-rework">
+                Stack:
+                <span class="font-normal text-mediumGray"
+                  >JavaScript, TensorFlow.js, MediaPipe, HTML5 Canvas</span
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Profil & Tentang Diri -->
+      <section
+        id="about"
+        class="py-20 sm:py-28 px-4 sm:px-8 md:px-12 border-b border-lightGray"
+      >
+        <div
+          class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start"
+        >
+          <div class="lg:col-span-5 space-y-8">
+            <div class="border border-ink p-3 bg-canvas group">
+              <div
+                class="aspect-3-4 overflow-hidden relative bg-lightGray select-none"
+              >
+                <img
+                  src="assets/profile.webp"
+                  alt="Portrait of I Gede Kasuma Dana"
+                  width="600"
+                  height="800"
+                  class="w-full h-full object-cover grayscale contrast-[105%] group-hover:grayscale-0 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                  onerror="
+                    this.src =
+                      'https://placehold.co/600x800/111/fff?text=Kasuma+Dana'
+                  "
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div
+                  class="absolute inset-0 bg-ink/10 mix-blend-multiply opacity-100 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none"
+                ></div>
+              </div>
+              <div
+                class="flex justify-between items-center mt-3 text-xs text-mediumGray font-rework"
+              >
+                <span class="font-medium text-ink">I Gede Kasuma Dana</span>
+                <span>Denpasar, Bali</span>
+              </div>
+            </div>
+
+            <div class="border border-lightGray p-6">
+              <h3 class="text-base font-light font-avec-sharp text-ink mb-2">
+                Ensemble Practice &amp; Engineering Discipline
+              </h3>
+              <p class="text-xs text-mediumGray leading-relaxed font-rework">
+                As a reong player performing traditional Balinese gamelan with
+                Sanggar Drupadi and the Palawara ensemble at the Bali Arts
+                Festival (Ardha Candra, Denpasar), I practiced precise rhythmic
+                cadence and tight synchronization. This structural discipline
+                directly informs how I organize software dependencies, modular
+                codebases, and team workflows.
+              </p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 space-y-8 lg:pl-4">
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-light font-avec-sharp leading-snug"
+            >
+              Building reliable web software with modular logic, responsive
+              layouts, and applied AI.
+            </h2>
+
+            <p
+              class="text-base leading-relaxed text-ink font-light font-avec-sharp"
+            >
+              I study Software Engineering at SMK Negeri 1 Denpasar, Bali. My
+              technical focus spans full-stack web applications, client-side
+              computer vision interfaces, and reliable database architectures.
+              My commitment to systematic development has earned back-to-back
+              <strong class="font-semibold text-ink"
+                >Distinction Graduate honors at Coding Camp powered by DBS
+                Foundation &amp; Dicoding (2025 and 2026)</strong
+              >.
+            </p>
+
+            <p class="text-sm text-mediumGray leading-relaxed font-rework">
+              I prioritize clean state boundaries, type safety, predictable API
+              communication, and accessible interface design. Whether delivering
+              as a sole engineer or collaborating within multi-disciplinary
+              teams, I focus on solving concrete technical problems with
+              maintainable implementations.
+            </p>
+
+            <div class="pt-8 border-t border-lightGray">
+              <h3 class="text-base font-light font-avec-sharp text-ink mb-6">
+                Education &amp; Industry Programs
+              </h3>
+              <div id="education-timeline" class="space-y-6">
+                <div
+                  class="border-b border-lightGray pb-4 hover:border-ink transition-state"
+                >
+                  <div
+                    class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1 gap-1"
+                  >
+                    <h4 class="text-sm font-semibold text-ink font-rework">
+                      SMK Negeri 1 Denpasar: Software Engineering (RPL)
+                    </h4>
+                    <span
+                      class="text-xs text-mediumGray font-rework whitespace-nowrap"
+                      >2024 - Present</span
+                    >
+                  </div>
+                  <p
+                    class="text-xs text-mediumGray font-rework leading-relaxed"
+                  >
+                    Coursework in full-stack architecture, algorithms,
+                    relational databases, and enterprise testing. 2nd Place LKS
+                    Web Technology Bali 2026.
+                  </p>
+                </div>
+
+                <div
+                  class="border-b border-lightGray pb-4 hover:border-ink transition-state"
+                >
+                  <div
+                    class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1 gap-1"
+                  >
+                    <h4 class="text-sm font-semibold text-ink font-rework">
+                      Coding Camp by DBS Foundation &amp; Dicoding
+                    </h4>
+                    <span
+                      class="text-xs text-mediumGray font-rework whitespace-nowrap"
+                      >2025 &amp; 2026</span
+                    >
+                  </div>
+                  <p
+                    class="text-xs text-mediumGray font-rework leading-relaxed"
+                  >
+                    Graduated consecutively with Distinction Honors across
+                    Frontend and Backend development learning paths. Winner of
+                    Best Capstone Project 2026.
+                  </p>
+                </div>
+
+                <div
+                  class="border-b border-lightGray pb-4 hover:border-ink transition-state"
+                >
+                  <div
+                    class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1 gap-1"
+                  >
+                    <h4 class="text-sm font-semibold text-ink font-rework">
+                      Industrial Workshops &amp; Applied AI Training
+                    </h4>
+                    <span
+                      class="text-xs text-mediumGray font-rework whitespace-nowrap"
+                      >2025 - 2026</span
+                    >
+                  </div>
+                  <p
+                    class="text-xs text-mediumGray font-rework leading-relaxed"
+                  >
+                    Completed hands-on data mining programs at Primakara
+                    University and competitive Web Technology training tracks.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kredensial & Penghargaan -->
+      <section
+        id="credentials"
+        class="py-20 sm:py-28 px-4 sm:px-8 md:px-12 border-b border-lightGray"
+      >
+        <div
+          class="flex justify-between items-baseline border-b border-ink pb-4 mb-12 sm:mb-16"
+        >
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl font-normal font-rework tracking-tight uppercase"
+          >
+            Credentials
+          </h2>
+          <span class="text-xs uppercase text-mediumGray font-rework">
+            Honors &amp; Capabilities
+          </span>
+        </div>
+
+        <div
+          class="border border-ink p-6 md:p-8 mb-16 flex flex-col md:flex-row md:items-center justify-between gap-6 bg-canvas"
+        >
+          <div class="space-y-1">
+            <h3 class="text-xl font-light font-avec-sharp text-ink">
+              Verified Technical Resume
+            </h3>
+            <p
+              class="text-xs md:text-sm text-mediumGray font-rework max-w-xl leading-relaxed"
+            >
+              Contains a concise breakdown of competition records, production
+              implementations, verified course certifications, and contact
+              channels for recruitment teams.
+            </p>
+          </div>
+          <a
+            href="assets/resume.pdf"
+            download="Resume_I_Gede_Kasuma_Dana.pdf"
+            class="inline-flex items-center justify-center gap-2 border border-ink bg-ink text-canvas px-6 py-3 text-xs uppercase font-rework tracking-wider hover:bg-canvas hover:text-ink transition-state shrink-0 min-h-[44px]"
+          >
+            <span>Download Resume (PDF)</span>
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M7 10l5 5m0 0l5-5m-5 5V3"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+          <div class="lg:col-span-6 space-y-6">
+            <h3 class="text-base font-light font-avec-sharp text-ink mb-4">
+              Competitions &amp; Honors
+            </h3>
+            <div
+              id="achievements-list"
+              class="divide-y divide-lightGray border-y border-lightGray"
+            >
+              <div
+                class="flex justify-between items-center py-3.5 hover:bg-canvas transition-state"
+              >
+                <span class="text-xs md:text-sm text-ink font-rework pr-2"
+                  >2nd Place LKS Web Technology (Bali Province)</span
+                >
+                <div class="flex items-center gap-3 shrink-0">
+                  <span class="text-xs text-mediumGray font-rework"
+                    >Silver Medal</span
+                  >
+                  <span
+                    class="text-[10px] bg-ink text-canvas px-2 py-0.5 font-mono"
+                    >2026</span
+                  >
+                </div>
+              </div>
+              <div
+                class="flex justify-between items-center py-3.5 hover:bg-canvas transition-state"
+              >
+                <span class="text-xs md:text-sm text-ink font-rework pr-2"
+                  >Best Capstone Project (Coding Camp DBS Foundation)</span
+                >
+                <div class="flex items-center gap-3 shrink-0">
+                  <span class="text-xs text-mediumGray font-rework"
+                    >Overall Winner</span
+                  >
+                  <span
+                    class="text-[10px] bg-ink text-canvas px-2 py-0.5 font-mono"
+                    >2026</span
+                  >
+                </div>
+              </div>
+              <div
+                class="flex justify-between items-center py-3.5 hover:bg-canvas transition-state"
+              >
+                <span class="text-xs md:text-sm text-ink font-rework pr-2"
+                  >Distinction Graduate (Coding Camp DBS Foundation)</span
+                >
+                <div class="flex items-center gap-3 shrink-0">
+                  <span class="text-xs text-mediumGray font-rework"
+                    >Highest Honors</span
+                  >
+                  <span
+                    class="text-[10px] bg-ink text-canvas px-2 py-0.5 font-mono"
+                    >2026</span
+                  >
+                </div>
+              </div>
+              <div
+                class="flex justify-between items-center py-3.5 hover:bg-canvas transition-state"
+              >
+                <span class="text-xs md:text-sm text-ink font-rework pr-2"
+                  >Distinction Graduate (Coding Camp DBS Foundation)</span
+                >
+                <div class="flex items-center gap-3 shrink-0">
+                  <span class="text-xs text-mediumGray font-rework"
+                    >Highest Honors</span
+                  >
+                  <span
+                    class="text-[10px] bg-ink text-canvas px-2 py-0.5 font-mono"
+                    >2025</span
+                  >
+                </div>
+              </div>
+              <div
+                class="flex justify-between items-center py-3.5 hover:bg-canvas transition-state"
+              >
+                <span class="text-xs md:text-sm text-ink font-rework pr-2"
+                  >1st Place Regional IT Quiz Competition</span
+                >
+                <div class="flex items-center gap-3 shrink-0">
+                  <span class="text-xs text-mediumGray font-rework"
+                    >1st Winner</span
+                  >
+                  <span
+                    class="text-[10px] bg-ink text-canvas px-2 py-0.5 font-mono"
+                    >2025</span
+                  >
+                </div>
+              </div>
+              <div
+                class="flex justify-between items-center py-3.5 hover:bg-canvas transition-state"
+              >
+                <span class="text-xs md:text-sm text-ink font-rework pr-2"
+                  >2nd Place AI Website Competition (YCWC)</span
+                >
+                <div class="flex items-center gap-3 shrink-0">
+                  <span class="text-xs text-mediumGray font-rework"
+                    >Silver Medal</span
+                  >
+                  <span
+                    class="text-[10px] bg-ink text-canvas px-2 py-0.5 font-mono"
+                    >2025</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 space-y-6">
+            <h3 class="text-base font-light font-avec-sharp text-ink mb-4">
+              Technical Capabilities
+            </h3>
+            <div
+              id="skills-list"
+              class="divide-y divide-lightGray border-y border-lightGray"
+            >
+              <div class="py-3.5">
+                <span
+                  class="text-xs font-semibold text-ink font-rework block mb-0.5"
+                  >Frontend Ecosystem</span
+                >
+                <span class="text-xs md:text-sm text-mediumGray font-rework"
+                  >React, Next.js, TypeScript, Tailwind CSS, Blade, HTML5,
+                  CSS3</span
+                >
+              </div>
+              <div class="py-3.5">
+                <span
+                  class="text-xs font-semibold text-ink font-rework block mb-0.5"
+                  >Backend &amp; Database</span
+                >
+                <span class="text-xs md:text-sm text-mediumGray font-rework"
+                  >Laravel, PHP, Node.js, Express.js, MySQL, PostgreSQL, RESTful
+                  APIs</span
+                >
+              </div>
+              <div class="py-3.5">
+                <span
+                  class="text-xs font-semibold text-ink font-rework block mb-0.5"
+                  >AI &amp; Computer Vision</span
+                >
+                <span class="text-xs md:text-sm text-mediumGray font-rework"
+                  >MediaPipe Vision, TensorFlow.js, OpenAI API, Python</span
+                >
+              </div>
+              <div class="py-3.5">
+                <span
+                  class="text-xs font-semibold text-ink font-rework block mb-0.5"
+                  >Workflow &amp; Infrastructure</span
+                >
+                <span class="text-xs md:text-sm text-mediumGray font-rework"
+                  >Git, GitHub, VS Code, Postman, Linux Terminal, Cloudflare,
+                  Vercel</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Saluran Kontak Langsung -->
+      <section
+        id="contact"
+        class="py-20 sm:py-28 px-4 sm:px-8 md:px-12 bg-canvas pb-32 sm:pb-36"
+      >
+        <div class="max-w-5xl space-y-10 sm:space-y-12">
+          <h2
+            class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-light font-avec-sharp leading-tight text-ink"
+          >
+            Open for software engineering internships, contract development, and
+            technical collaboration.
+          </h2>
+
+          <div class="pt-2 sm:pt-4 space-y-4">
+            <div class="flex flex-wrap items-center gap-4 sm:gap-6">
+              <a
+                href="mailto:contact@kasuma.id"
+                class="break-all text-xl sm:text-3xl md:text-4xl font-light font-avec-sharp text-ink hover:text-mediumGray border-b-2 border-ink hover:border-mediumGray pb-1 transition-state"
+              >
+                contact@kasuma.id ↗
+              </a>
+              <!-- Perbaikan Aksesibilitas WCAG 2.5.3: Label selaras dengan teks tombol -->
+              <button
+                type="button"
+                id="copyEmailBtn"
+                onclick="copyEmailAddress()"
+                class="border border-ink px-4 py-2.5 text-xs uppercase font-rework hover:bg-ink hover:text-canvas transition-state min-h-[44px] flex items-center gap-2 cursor-pointer"
+                aria-label="Copy Address"
+              >
+                <span id="copyBtnText">Copy Address</span>
+                <svg
+                  id="copyIcon"
+                  class="w-3.5 h-3.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <p id="copyNotice" class="text-xs font-mono text-mediumGray hidden">
+              Email copied to clipboard.
+            </p>
+          </div>
+
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 sm:pt-16 border-t border-lightGray"
+          >
+            <div class="space-y-1">
+              <span class="text-xs text-mediumGray font-rework block"
+                >GitHub</span
+              >
+              <a
+                href="https://github.com/kasumadana"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm font-semibold hover:underline"
+              >
+                @kasumadana ↗
+              </a>
+            </div>
+            <div class="space-y-1">
+              <span class="text-xs text-mediumGray font-rework block"
+                >LinkedIn</span
+              >
+              <a
+                href="https://www.linkedin.com/in/kasumadana/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm font-semibold hover:underline"
+              >
+                in/kasumadana ↗
+              </a>
+            </div>
+            <div class="space-y-1">
+              <span class="text-xs text-mediumGray font-rework block"
+                >Canonical Domain</span
+              >
+              <a
+                href="https://www.kasuma.id/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm font-semibold hover:underline"
+              >
+                kasuma.id ↗
+              </a>
+            </div>
+            <div class="space-y-1">
+              <span class="text-xs text-mediumGray font-rework block"
+                >Status</span
+              >
+              <span class="text-sm font-semibold text-ink">Available</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Skrip Pustaka Eksternal dengan Penanganan Non-Blocking -->
+    <script
+      src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <!-- Logika Antarmuka Pengguna -->
+    <script type="text/javascript">
+      function copyEmailAddress() {
+        navigator.clipboard.writeText("contact@kasuma.id").then(() => {
+          const btnText = document.getElementById("copyBtnText");
+          const notice = document.getElementById("copyNotice");
+          btnText.textContent = "Copied!";
+          notice.classList.remove("hidden");
+          setTimeout(() => {
+            btnText.textContent = "Copy Address";
+            notice.classList.add("hidden");
+          }, 3000);
+        });
+      }
+
+      function initRadialReveal() {
+        const cards = document.querySelectorAll(".project-visual-link");
+
+        cards.forEach((card) => {
+          const colorImg = card.querySelector(".project-color-reveal");
+          if (!colorImg) return;
+
+          let anim = null;
+
+          card.addEventListener("mouseenter", (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            colorImg.style.setProperty("--x", `${x}px`);
+            colorImg.style.setProperty("--y", `${y}px`);
+
+            const maxRadius = Math.hypot(
+              Math.max(x, rect.width - x),
+              Math.max(y, rect.height - y),
+            );
+
+            if (anim) anim.kill();
+
+            if (typeof gsap !== "undefined") {
+              const proxy = { r: parseFloat(colorImg.dataset.r || 0) };
+              anim = gsap.to(proxy, {
+                r: maxRadius + 30,
+                duration: 0.65,
+                ease: "power2.out",
+                onUpdate: () => {
+                  colorImg.dataset.r = proxy.r;
+                  colorImg.style.setProperty("--r", `${proxy.r}px`);
+                },
+              });
+            }
+          });
+
+          card.addEventListener("mousemove", (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            colorImg.style.setProperty("--x", `${x}px`);
+            colorImg.style.setProperty("--y", `${y}px`);
+          });
+
+          card.addEventListener("mouseleave", () => {
+            if (anim) anim.kill();
+
+            if (typeof gsap !== "undefined") {
+              const proxy = { r: parseFloat(colorImg.dataset.r || 0) };
+              anim = gsap.to(proxy, {
+                r: 0,
+                duration: 0.45,
+                ease: "power2.inOut",
+                onUpdate: () => {
+                  colorImg.dataset.r = proxy.r;
+                  colorImg.style.setProperty("--r", `${proxy.r}px`);
+                },
+              });
+            }
+          });
+        });
+      }
+
+      function initScrollAndAnimations() {
+        const prefersReducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+
+        if (prefersReducedMotion) return;
+
+        if (typeof Lenis !== "undefined") {
+          const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            orientation: "vertical",
+            smoothWheel: true,
+          });
+
+          if (typeof ScrollTrigger !== "undefined") {
+            lenis.on("scroll", ScrollTrigger.update);
+            gsap.ticker.add((time) => {
+              lenis.raf(time * 1000);
+            });
+            gsap.ticker.lagSmoothing(0);
+          }
+        }
+
+        if (
+          typeof gsap !== "undefined" &&
+          typeof ScrollTrigger !== "undefined"
+        ) {
+          gsap.registerPlugin(ScrollTrigger);
+
+          const heroTimeline = gsap.timeline({
+            scrollTrigger: {
+              trigger: "#content",
+              start: "top bottom",
+              end: "top top",
+              scrub: true,
+            },
+          });
+
+          heroTimeline
+            .to("#hero-content", { y: -60, opacity: 0.2, ease: "none" }, 0)
+            .to("#hero-title", { y: -30, opacity: 0.3, ease: "none" }, 0)
+            .to("#hero-bg img", { y: 30, opacity: 0.25, ease: "none" }, 0);
+
+          const projectCards = document.querySelectorAll(".project-card");
+          projectCards.forEach((card) => {
+            gsap.fromTo(
+              card,
+              { opacity: 0, y: 30 },
+              {
+                opacity: 1,
+                y: 0,
+                duration: 0.7,
+                ease: "power3.out",
+                scrollTrigger: {
+                  trigger: card,
+                  start: "top 88%",
+                  toggleActions: "play none none none",
+                },
+              },
+            );
+          });
+        }
+      }
+
+      window.addEventListener("DOMContentLoaded", () => {
+        initRadialReveal();
+        initScrollAndAnimations();
+      });
+    </script>
   </body>
 </html>
