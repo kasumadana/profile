@@ -113,7 +113,7 @@
               "url": "https://me.kasuma.id/",
               "name": "Kasuma Dana"
             },
-            "about": {
+            "mainEntity": {
               "@id": "https://me.kasuma.id/#person"
             }
           },
@@ -125,7 +125,10 @@
             "url": "https://me.kasuma.id/",
             "image": "https://me.kasuma.id/assets/profile.webp",
             "jobTitle": "Software Engineering Student",
-            "alumniOf": "SMK Negeri 1 Denpasar",
+            "alumniOf": {
+              "@type": "EducationalOrganization",
+              "name": "SMK Negeri 1 Denpasar"
+            },
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Denpasar",
