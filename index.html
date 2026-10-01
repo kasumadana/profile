@@ -1,12 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>I Gede Kasuma Dana | Software Engineering Student</title>
+    <title>
+      I Gede Kasuma Dana | Software Engineering Student &amp; Freelance
+      Developer
+    </title>
     <meta
       name="description"
-      content="Personal portfolio of I Gede Kasuma Dana, a Software Engineering student at SMK Negeri 1 Denpasar, Bali."
+      content="Personal portfolio of I Gede Kasuma Dana, a Software Engineering student from Bali open for freelance full-stack web development, system architecture, and applied computer vision interfaces."
     />
     <meta name="author" content="I Gede Kasuma Dana" />
     <link rel="canonical" href="https://me.kasuma.id/" />
@@ -15,11 +18,11 @@
     <meta property="og:site_name" content="Kasuma Dana" />
     <meta
       property="og:title"
-      content="I Gede Kasuma Dana | Software Engineering Student"
+      content="I Gede Kasuma Dana | Software Engineering Student &amp; Freelance Developer"
     />
     <meta
       property="og:description"
-      content="Portfolio of I Gede Kasuma Dana, studying Software Engineering at SMK Negeri 1 Denpasar."
+      content="Portfolio of I Gede Kasuma Dana, studying Software Engineering at SMK Negeri 1 Denpasar, Bali. Open for freelance web development and client-side AI projects."
     />
     <meta
       property="og:image"
@@ -32,11 +35,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="I Gede Kasuma Dana | Software Engineering Student"
+      content="I Gede Kasuma Dana | Software Engineering Student &amp; Freelance Developer"
     />
     <meta
       name="twitter:description"
-      content="Portfolio of I Gede Kasuma Dana, studying Software Engineering at SMK Negeri 1 Denpasar."
+      content="Portfolio of I Gede Kasuma Dana, studying Software Engineering at SMK Negeri 1 Denpasar, Bali. Open for freelance web development and client-side AI projects."
     />
     <meta
       name="twitter:image"
@@ -52,50 +55,13 @@
       title="LLM Context"
     />
 
-    <!-- Typography (Preload & Non-blocking) -->
+    <!-- Typography (Optimized Google Fonts) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..400&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&family=Syne:wght@700;800&display=swap"
-    />
-    <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..400&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&family=Syne:wght@700;800&display=swap"
-      media="print"
-      onload="this.media = 'all'"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..400&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap"
     />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..400&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&family=Syne:wght@700;800&display=swap"
-      />
-    </noscript>
-
-    <!-- Tailwind CSS Play CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              canvas: "#ffffff",
-              ink: "#111111",
-              mediumGray: "#525252",
-              lightGray: "#e5e5e5",
-              fadedGray: "#737373",
-            },
-            fontFamily: {
-              onsite: ["Inter", "sans-serif"],
-              "avec-sharp": ["Fraunces", "serif"],
-              ceno: ["Syne", "sans-serif"],
-              rework: ["Space Grotesk", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
 
     <!-- Structured Data (Schema.org ProfilePage + Person) -->
     <script type="application/ld+json">
@@ -124,7 +90,7 @@
             "alternateName": "Kasuma Dana",
             "url": "https://me.kasuma.id/",
             "image": "https://me.kasuma.id/assets/profile.webp",
-            "jobTitle": "Software Engineering Student",
+            "jobTitle": "Software Engineering Student & Freelance Developer",
             "alumniOf": {
               "@type": "EducationalOrganization",
               "name": "SMK Negeri 1 Denpasar"
@@ -144,144 +110,576 @@
       }
     </script>
 
-    <style type="text/css">
-      * {
-        border-radius: 0px !important;
-        box-shadow: none !important;
+    <style>
+      /* Design Tokens */
+      :root {
+        --canvas: #ffffff;
+        --ink: #111111;
+        --ink-elevated: #1a1a1a;
+        --medium-gray: #525252;
+        --light-gray: #e5e5e5;
+        --faded-gray: #737373;
+        --dark-bg: #111111;
+        --dark-elevated: #1a1a1a;
+        --dark-text: #ffffff;
+        --dark-muted: rgba(255, 255, 255, 0.85);
+        --font-body:
+          "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        --font-serif: "Fraunces", Georgia, serif;
+        --font-display: "Syne", "Inter", sans-serif;
+        --font-mono: "Space Grotesk", monospace, sans-serif;
+      }
+
+      /* Base Reset & Core Sizing */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        font-family: var(--font-body);
+        color: var(--ink);
+        background-color: var(--canvas);
         -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
       }
 
-      html.lenis,
-      html.lenis body {
-        height: auto;
+      body {
+        min-height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+        background-color: var(--canvas);
+        color: var(--ink);
       }
 
-      .lenis.lenis-smooth {
-        scroll-behavior: auto !important;
+      /* Global SVG Constraint: Never blow up */
+      svg {
+        display: inline-block;
+        vertical-align: middle;
+        flex-shrink: 0;
+        max-width: 100%;
       }
 
-      .lenis.lenis-smooth [data-lenis-prevent] {
-        overscroll-behavior: contain;
+      /* Complete Pure CSS Layout Utility Suite */
+      .flex {
+        display: flex;
+      }
+      .inline-flex {
+        display: inline-flex;
+      }
+      .flex-col {
+        flex-direction: column;
+      }
+      .flex-wrap {
+        flex-wrap: wrap;
+      }
+      .items-center {
+        align-items: center;
+      }
+      .items-baseline {
+        align-items: baseline;
+      }
+      .items-start {
+        align-items: flex-start;
+      }
+      .justify-between {
+        justify-content: space-between;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+      .shrink-0 {
+        flex-shrink: 0;
       }
 
-      .lenis.lenis-stopped {
+      .grid {
+        display: grid;
+      }
+      .block {
+        display: block;
+      }
+      .hidden {
+        display: none;
+      }
+
+      .relative {
+        position: relative;
+      }
+      .absolute {
+        position: absolute;
+      }
+      .fixed {
+        position: fixed;
+      }
+      .sticky {
+        position: sticky;
+      }
+      .top-0 {
+        top: 0;
+      }
+      .left-0 {
+        left: 0;
+      }
+      .right-0 {
+        right: 0;
+      }
+      .bottom-0 {
+        bottom: 0;
+      }
+      .inset-0 {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      .z-0 {
+        z-index: 0;
+      }
+      .z-10 {
+        z-index: 10;
+      }
+      .z-50 {
+        z-index: 50;
+      }
+
+      .w-full {
+        width: 100%;
+      }
+      .h-full {
+        height: 100%;
+      }
+      .w-auto {
+        width: auto;
+      }
+      .overflow-hidden {
         overflow: hidden;
       }
+      .cursor-pointer {
+        cursor: pointer;
+      }
+      .select-none {
+        user-select: none;
+      }
+      .pointer-events-none {
+        pointer-events: none;
+      }
+      .pointer-events-auto {
+        pointer-events: auto;
+      }
 
-      ::-webkit-scrollbar {
-        width: 6px;
+      /* Icon Dimensions */
+      .icon-sm {
+        width: 14px;
+        height: 14px;
       }
-      ::-webkit-scrollbar-track {
-        background: #ffffff;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #111111;
+      .icon-md {
+        width: 16px;
+        height: 16px;
       }
 
+      /* Typographic Scale with Strong Steps */
+      h1,
+      .h1 {
+        font-family: var(--font-display);
+        font-size: clamp(2.75rem, 8.5vw, 6.25rem);
+        font-weight: 800;
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+        color: inherit;
+      }
+
+      h2,
+      .h2 {
+        font-family: var(--font-serif);
+        font-size: clamp(1.85rem, 4.5vw, 3rem);
+        font-weight: 300;
+        line-height: 1.3;
+        letter-spacing: -0.02em;
+        color: inherit;
+      }
+
+      h3,
+      .h3 {
+        font-family: var(--font-serif);
+        font-size: clamp(1.35rem, 2.75vw, 1.85rem);
+        font-weight: 300;
+        line-height: 1.35;
+        color: inherit;
+      }
+
+      h4,
+      .h4 {
+        font-family: var(--font-mono);
+        font-size: 1.0625rem;
+        font-weight: 600;
+        line-height: 1.4;
+        color: inherit;
+      }
+
+      p,
+      .p {
+        font-size: 0.9375rem;
+        line-height: 1.65;
+        max-width: 68ch;
+      }
+
+      .font-onsite {
+        font-family: var(--font-body);
+      }
+      .font-avec-sharp {
+        font-family: var(--font-serif);
+      }
+      .font-ceno {
+        font-family: var(--font-display);
+      }
+      .font-rework {
+        font-family: var(--font-mono);
+      }
+      .font-mono {
+        font-family:
+          ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      }
+
+      .text-xs {
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+      }
+      .text-sm {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+      }
+      .text-base {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .uppercase {
+        text-transform: uppercase;
+      }
+      .tracking-wider {
+        letter-spacing: 0.04em;
+      }
+      .tracking-tight {
+        letter-spacing: -0.02em;
+      }
+      .tracking-tighter {
+        letter-spacing: -0.04em;
+      }
+      .whitespace-nowrap {
+        white-space: nowrap;
+      }
+
+      /* Color Tokens & Explicit Utilities */
+      .bg-canvas {
+        background-color: var(--canvas);
+      }
+      .text-ink {
+        color: var(--ink);
+      }
+      .text-white {
+        color: #ffffff;
+      }
+      .text-black {
+        color: #111111;
+      }
+      .text-mediumGray {
+        color: var(--medium-gray);
+      }
+      .text-fadedGray {
+        color: var(--faded-gray);
+      }
+      .border-lightGray {
+        border-color: var(--light-gray);
+      }
+      .border-ink {
+        border-color: var(--ink);
+      }
+      .bg-lightGray {
+        background-color: var(--light-gray);
+      }
+      .bg-white {
+        background-color: #ffffff;
+      }
+      .bg-ink {
+        background-color: var(--ink);
+      }
+
+      /* Interactive States & Focus */
+      a,
+      button {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a.text-white,
+      button.text-white {
+        color: #ffffff;
+      }
+
+      :focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 3px;
+      }
+
+      /* Hover States */
+      .hover\:bg-white:hover {
+        background-color: #ffffff !important;
+      }
+      .hover\:text-black:hover {
+        color: #111111 !important;
+      }
+      .hover\:bg-ink:hover {
+        background-color: var(--ink) !important;
+      }
+      .hover\:text-canvas:hover {
+        color: var(--canvas) !important;
+      }
+      .hover\:text-neutral-300:hover {
+        color: #d4d4d4 !important;
+      }
+      .hover\:text-mediumGray:hover {
+        color: var(--medium-gray) !important;
+      }
+      .hover\:border-white:hover {
+        border-color: #ffffff !important;
+      }
+      .hover\:border-ink:hover {
+        border-color: var(--ink) !important;
+      }
+      .hover\:underline:hover {
+        text-decoration: underline !important;
+      }
+
+      /* Transitions */
       .transition-state {
-        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        transition:
+          color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+          background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+          border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+          opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      /* Header & Backdrop Blur Styling: Colorless, Transparent, Long Subtle Fade Blur */
+      .site-header-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        pointer-events: none;
+        z-index: 40;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        mask-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.85) 0%,
+          rgba(0, 0, 0, 0.35) 35%,
+          rgba(0, 0, 0, 0.08) 70%,
+          transparent 100%
+        );
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.85) 0%,
+          rgba(0, 0, 0, 0.35) 35%,
+          rgba(0, 0, 0, 0.08) 70%,
+          transparent 100%
+        );
+      }
+
+      header.site-header {
+        height: 72px;
+        background: transparent;
+        color: #ffffff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 50;
+        border-bottom: none;
+      }
+
+      header.site-header a {
+        color: #ffffff;
+        mix-blend-mode: difference;
+        transition:
+          opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+          border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      header.site-header a:hover {
+        opacity: 0.7;
+      }
+
+      /* Hero Specific Styling */
+      #home {
+        background-color: var(--dark-bg);
+        color: var(--dark-text);
+        min-height: 100vh;
+        min-height: 100dvh;
+      }
+
+      /* GPU Accelerated Visual Hover */
+      .project-visual-box {
+        position: relative;
+        overflow: hidden;
+        background-color: var(--light-gray);
+      }
+
+      .project-visual-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(100%) contrast(105%);
+        transition:
+          filter 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .project-card:hover .project-visual-img,
+      .project-card:focus-within .project-visual-img,
+      .profile-visual-box:hover .project-visual-img,
+      .profile-visual-box:focus-within .project-visual-img {
+        filter: grayscale(0%) contrast(100%);
+        transform: scale(1.02);
       }
 
       .aspect-16-10 {
         aspect-ratio: 16 / 10;
       }
-
       .aspect-3-4 {
         aspect-ratio: 3 / 4;
       }
 
-      #hero-title {
-        min-height: clamp(3rem, 12vw, 10rem);
+      /* Padding & Container Clamps */
+      .section-pad {
+        padding-top: clamp(4.5rem, 8vw, 7rem);
+        padding-bottom: clamp(4.5rem, 8vw, 7rem);
+        padding-left: clamp(1rem, 5vw, 3rem);
+        padding-right: clamp(1rem, 5vw, 3rem);
       }
 
-      /* Masking Warna Radial */
-      .project-color-reveal {
-        --x: 50%;
-        --y: 50%;
-        --r: 0px;
-        pointer-events: none;
-        -webkit-mask-image: radial-gradient(
-          circle var(--r) at var(--x) var(--y),
-          #000 0%,
-          #000 95%,
-          transparent 100%
-        );
-        mask-image: radial-gradient(
-          circle var(--r) at var(--x) var(--y),
-          #000 0%,
-          #000 95%,
-          transparent 100%
-        );
-        will-change:
-          mask-image,
-          -webkit-mask-image;
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--canvas);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--ink);
       }
 
-      @media (hover: none) {
-        .project-color-reveal {
-          -webkit-mask-image: none !important;
-          mask-image: none !important;
-          opacity: 0.95;
+      /* Responsive Breakpoint Utilities */
+      @media (min-width: 640px) {
+        .sm\:inline-flex {
+          display: inline-flex;
+        }
+        .sm\:hidden {
+          display: none;
+        }
+        .sm\:flex-row {
+          flex-direction: row;
+        }
+        .sm\:text-xs {
+          font-size: 0.75rem;
+        }
+        .sm\:text-base {
+          font-size: 1rem;
         }
       }
 
+      @media (min-width: 768px) {
+        .md\:flex-row {
+          flex-direction: row;
+        }
+        .md\:text-sm {
+          font-size: 0.875rem;
+        }
+        .md\:text-base {
+          font-size: 1rem;
+        }
+      }
+
+      /* Intentional Reduced-Motion Alternative */
       @media (prefers-reduced-motion: reduce) {
         *,
-        ::before,
-        ::after {
-          animation-duration: 0.01ms !important;
+        *::before,
+        *::after {
+          animation-duration: 0.001s !important;
           animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
+          transition-duration: 0.001s !important;
           scroll-behavior: auto !important;
+        }
+        .project-visual-img {
+          filter: grayscale(0%) contrast(100%) !important;
+          transform: none !important;
+          transition: none !important;
         }
       }
     </style>
   </head>
   <body
-    class="bg-canvas text-ink font-onsite min-h-screen selection:bg-ink selection:text-canvas relative overflow-x-hidden"
+    class="bg-canvas text-ink font-onsite selection:bg-black selection:text-white"
   >
-    <!-- Navigasi Utama -->
+    <!-- Background Blur Gradient Layer for Navigation -->
+    <div class="site-header-backdrop" aria-hidden="true"></div>
+
+    <!-- Main Header & Navigation -->
     <header
-      class="fixed top-0 left-0 w-full h-[70px] md:h-[75px] z-50 flex items-center justify-between px-4 sm:px-8 md:px-12 text-canvas mix-blend-difference pointer-events-auto"
-      aria-label="Primary Navigation"
+      class="site-header fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 sm:px-8 md:px-12 pointer-events-auto"
+      style="
+        padding-left: clamp(1rem, 4vw, 3rem);
+        padding-right: clamp(1rem, 4vw, 3rem);
+      "
+      role="banner"
     >
       <a
         href="#home"
-        class="font-semibold text-xs tracking-[0.2em] font-rework hover:text-mediumGray transition-state uppercase py-2 focus-visible:outline-dashed focus-visible:outline-1"
+        class="font-semibold text-xs tracking-wider font-rework uppercase py-3 min-h-[44px] inline-flex items-center"
+        aria-label="Kasuma Dana - Back to top"
       >
         Kasuma Dana
       </a>
 
-      <div class="flex items-center gap-4 sm:gap-6 md:gap-10">
-        <nav aria-label="Sections">
+      <div class="flex items-center" style="gap: clamp(1rem, 3vw, 2.5rem)">
+        <nav aria-label="Primary Navigation">
           <ul
-            class="flex items-center gap-3 sm:gap-6 md:gap-8 text-[11px] sm:text-xs uppercase tracking-wider font-rework"
+            class="flex items-center text-xs uppercase tracking-wider font-rework"
+            style="gap: clamp(0.75rem, 2vw, 2rem); list-style: none"
           >
             <li>
               <a
                 href="#works"
-                class="hover:text-mediumGray border-b border-transparent hover:border-canvas pb-0.5 transition-state py-2"
+                class="border-b border-transparent hover:border-current pb-0.5 py-3 min-h-[44px] inline-flex items-center"
                 >Works</a
               >
             </li>
             <li>
               <a
                 href="#about"
-                class="hover:text-mediumGray border-b border-transparent hover:border-canvas pb-0.5 transition-state py-2"
+                class="border-b border-transparent hover:border-current pb-0.5 py-3 min-h-[44px] inline-flex items-center"
                 >About</a
               >
             </li>
             <li>
               <a
                 href="#credentials"
-                class="hover:text-mediumGray border-b border-transparent hover:border-canvas pb-0.5 transition-state py-2"
+                class="border-b border-transparent hover:border-current pb-0.5 py-3 min-h-[44px] inline-flex items-center"
                 >Credentials</a
               >
             </li>
             <li>
               <a
                 href="#contact"
-                class="hover:text-mediumGray border-b border-transparent hover:border-canvas pb-0.5 transition-state py-2"
+                class="border-b border-transparent hover:border-current pb-0.5 py-3 min-h-[44px] inline-flex items-center"
                 >Contact</a
               >
             </li>
@@ -291,12 +689,13 @@
         <a
           href="assets/resume.pdf"
           download="Resume_I_Gede_Kasuma_Dana.pdf"
-          class="hidden sm:inline-flex items-center gap-2 border border-canvas/70 px-3.5 py-1.5 text-xs uppercase tracking-wider font-rework hover:bg-canvas hover:text-ink transition-state min-h-[40px]"
+          class="hidden sm:inline-flex items-center border border-current text-xs uppercase tracking-wider font-rework min-h-[44px]"
+          style="gap: 0.5rem; padding: 0.5rem 1rem"
           title="Download PDF Resume"
         >
           <span>Resume (PDF)</span>
           <svg
-            class="w-3 h-3"
+            class="icon-sm"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -313,18 +712,18 @@
       </div>
     </header>
 
-    <!-- Hero Section (Teks Featured Capstone Project telah dihapus) -->
+    <!-- Hero Section (Primary Document Subject Leads Viewport) -->
     <section
       id="home"
-      class="sticky top-0 z-0 w-full h-screen bg-[#111111] flex flex-col justify-between overflow-hidden"
+      class="sticky top-0 z-0 w-full flex flex-col justify-between overflow-hidden"
       style="
         background: radial-gradient(
           circle at 50% 30%,
-          #1d1d1d 0%,
+          #1a1a1a 0%,
           #111111 100%
         );
       "
-      aria-label="Hero Introduction"
+      aria-label="Introduction &amp; Profile"
     >
       <div
         id="hero-bg"
@@ -332,50 +731,92 @@
       >
         <img
           src="assets/nature.webp"
-          alt="Atmospheric Landscape Background"
+          alt="Atmospheric landscape texture"
           width="1920"
           height="1080"
           fetchpriority="high"
           loading="eager"
           decoding="async"
           onerror="this.style.display = 'none'"
-          class="w-full h-full object-cover opacity-60 mix-blend-screen scale-105"
+          class="w-full h-full object-cover"
+          style="opacity: 0.5; mix-blend-mode: screen; transform: scale(1.05)"
         />
         <div
-          class="absolute inset-0 bg-gradient-to-b from-transparent via-[#111111]/30 to-[#111111]/90"
+          class="absolute inset-0"
+          style="
+            background: linear-gradient(
+              to bottom,
+              transparent,
+              rgba(17, 17, 17, 0.4) 50%,
+              rgba(17, 17, 17, 0.95) 100%
+            );
+          "
         ></div>
       </div>
 
+      <!-- Hero Lead Context: Author Identity & Mission -->
       <div
         id="hero-content"
-        class="relative z-10 w-full px-4 sm:px-8 md:px-12 pt-32 sm:pt-36 text-canvas"
+        class="relative z-10 w-full pt-32 sm:pt-36 text-white"
+        style="
+          padding-left: clamp(1rem, 5vw, 3rem);
+          padding-right: clamp(1rem, 5vw, 3rem);
+          padding-top: clamp(7.5rem, 14vh, 10rem);
+        "
       >
-        <div class="max-w-xl md:max-w-2xl space-y-4">
-          <h2
-            class="text-3xl sm:text-4xl md:text-5xl font-light font-avec-sharp tracking-tight text-canvas"
-          >
-            TaruPramana
-          </h2>
+        <div
+          style="
+            max-width: 46rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+          "
+        >
           <p
-            class="text-sm sm:text-base text-canvas/85 leading-relaxed font-rework"
+            class="text-xs tracking-wider font-rework font-medium"
+            style="color: rgba(255, 255, 255, 0.75)"
           >
-            A web application translating classical Balinese palm-leaf herbal
-            manuscripts into a structured relational database. Built with React,
-            Express.js, and OpenAI API integration. Awarded Best Capstone
-            Project at Coding Camp DBS Foundation 2026.
+            SMK Negeri 1 Denpasar · Software Engineering · Bali
           </p>
 
-          <div class="pt-3 flex flex-wrap gap-4">
+          <h2
+            class="h2 text-white"
+            style="font-size: clamp(1.75rem, 4vw, 2.75rem); line-height: 1.3"
+          >
+            Building web applications, applied AI, and interfaces.
+          </h2>
+
+          <p
+            class="text-sm sm:text-base font-rework"
+            style="
+              color: rgba(255, 255, 255, 0.85);
+              line-height: 1.65;
+              max-width: 42rem;
+            "
+          >
+            Vocational student on industrial internship (PKL), developing competition web systems and open for freelance projects.
+          </p>
+
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 1rem;
+              padding-top: 0.75rem;
+            "
+          >
             <a
               href="#works"
-              class="inline-flex items-center gap-2 border border-canvas px-5 py-2.5 text-xs uppercase tracking-wider font-rework hover:bg-canvas hover:text-ink transition-state min-h-[44px]"
+              class="inline-flex items-center border border-white text-xs uppercase tracking-wider font-rework hover:bg-white hover:text-black transition-state min-h-[44px]"
+              style="gap: 0.5rem; padding: 0.625rem 1.25rem"
             >
               Explore Works ↓
             </a>
             <a
               href="assets/resume.pdf"
               download="Resume_I_Gede_Kasuma_Dana.pdf"
-              class="inline-flex items-center gap-2 border border-canvas/50 px-5 py-2.5 text-xs uppercase tracking-wider font-rework hover:border-canvas hover:bg-canvas hover:text-ink transition-state sm:hidden min-h-[44px]"
+              class="inline-flex items-center border border-white/60 text-xs uppercase tracking-wider font-rework hover:border-white hover:bg-white hover:text-black transition-state min-h-[44px]"
+              style="gap: 0.5rem; padding: 0.625rem 1.25rem"
             >
               Resume (PDF) ↗
             </a>
@@ -383,439 +824,107 @@
         </div>
       </div>
 
+      <!-- Hero Masthead (H1: Primary Page Subject) -->
       <div
         id="hero-title"
-        class="relative z-10 w-full px-4 md:px-10 pb-6 pointer-events-none select-none flex items-center justify-center"
+        class="relative z-10 w-full pb-6 pointer-events-none select-none flex items-center justify-center min-h-[clamp(3rem,12vw,9rem)]"
+        style="
+          padding-left: clamp(1rem, 4vw, 2.5rem);
+          padding-right: clamp(1rem, 4vw, 2.5rem);
+        "
       >
-        <h1
-          class="text-[clamp(2.8rem,10vw,7rem)] leading-none font-black tracking-tighter text-canvas text-center font-ceno opacity-95"
-        >
+        <h1 class="h1 text-white text-center font-ceno" style="opacity: 0.95">
           KASUMADANA
         </h1>
       </div>
     </section>
 
-    <!-- Konten Utama -->
+    <!-- Main Content Area -->
     <main
       id="content"
-      class="w-full relative z-10 bg-canvas border-t border-ink shadow-[0_-20px_50px_rgba(0,0,0,0.35)]"
+      class="w-full relative z-10 bg-canvas"
+      style="
+        box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.35);
+        border-top: 1px solid var(--ink);
+      "
     >
       <!-- Selected Works Section -->
       <section
         id="works"
-        class="py-20 sm:py-28 px-4 sm:px-8 md:px-12 border-b border-lightGray"
+        class="section-pad"
+        style="border-bottom: 1px solid var(--light-gray)"
+        aria-labelledby="works-heading"
       >
         <div
-          class="flex justify-between items-baseline border-b border-ink pb-4 mb-16 md:mb-24"
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px solid var(--ink);
+            padding-bottom: 1rem;
+            margin-bottom: clamp(3rem, 6vw, 6rem);
+          "
         >
-          <h2
-            class="text-2xl sm:text-3xl md:text-4xl font-normal font-rework tracking-tight uppercase"
-          >
+          <h2 id="works-heading" class="h2 uppercase font-rework font-normal">
             Selected Works
           </h2>
           <span
             class="text-xs font-mono uppercase text-mediumGray"
             id="works-counter"
           >
-            [Total: 04 Projects]
+            [04 Selected Works]
           </span>
         </div>
 
         <div
           id="projects-grid"
-          class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20 md:gap-y-28"
+          style="
+            display: grid;
+            grid-template-columns: repeat(
+              auto-fit,
+              minmax(min(100%, 480px), 1fr)
+            );
+            gap: clamp(3rem, 6vw, 6rem) clamp(2rem, 4vw, 4rem);
+          "
         >
-          <!-- Proyek 01: Aksa -->
-          <article
-            class="project-card flex flex-col space-y-6 transition-state group"
-          >
-            <a
-              href="https://aksa.kasuma.id"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-visual-link block border border-ink p-3 bg-canvas relative overflow-hidden cursor-pointer"
-              title="Open live project: Aksa"
-              aria-label="Launch live deployment of Aksa"
-            >
-              <div
-                class="aspect-16-10 overflow-hidden relative bg-lightGray select-none"
-              >
-                <img
-                  src="assets/aksa.webp"
-                  alt="Aksa: Adaptive Kinesthetic Learning Platform"
-                  width="800"
-                  height="500"
-                  class="w-full h-full object-cover filter grayscale contrast-[105%]"
-                  onerror="
-                    this.src =
-                      'https://placehold.co/960x600/111/fff?text=Aksa+Preview'
-                  "
-                  loading="lazy"
-                  decoding="async"
-                />
-                <img
-                  src="assets/aksa.webp"
-                  alt=""
-                  width="800"
-                  height="500"
-                  aria-hidden="true"
-                  class="project-color-reveal absolute inset-0 w-full h-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div
-                  class="absolute top-3 right-3 w-7 h-7 bg-ink text-canvas flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                >
-                  ↗
-                </div>
-              </div>
-            </a>
-            <div class="space-y-4">
-              <div
-                class="flex justify-between items-baseline border-b border-lightGray pb-2"
-              >
-                <span class="text-xs uppercase text-mediumGray font-rework"
-                  >Applied Computer Vision &amp; AI</span
-                >
-                <span class="text-xs font-mono text-mediumGray">#01</span>
-              </div>
-              <h3
-                class="text-xl sm:text-2xl font-light font-avec-sharp text-ink"
-              >
-                <a
-                  href="https://aksa.kasuma.id"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="hover:text-mediumGray transition-state inline-flex items-baseline gap-1"
-                >
-                  <span>Aksa: Adaptive Kinesthetic Learning Platform</span>
-                  <span class="text-xs font-rework opacity-60">↗</span>
-                </a>
-              </h3>
-              <div
-                class="inline-flex items-center gap-2 border border-ink/20 px-2.5 py-1 text-xs font-rework text-ink bg-lightGray/30"
-              >
-                <span class="font-semibold uppercase tracking-wider text-[10px]"
-                  >Role:</span
-                >
-                <span>Full Stack Developer</span>
-              </div>
-              <p
-                class="text-xs md:text-sm text-mediumGray leading-relaxed font-rework"
-              >
-                A touch-free interactive educational platform driven by
-                real-time hand-gesture recognition and conversational Voice AI.
-                Users navigate modular course syllabi and answer interactive
-                quizzes directly in the browser via webcam input.
-              </p>
-              <div class="text-xs text-ink font-semibold font-rework">
-                Stack:
-                <span class="font-normal text-mediumGray"
-                  >Next.js, TypeScript, MediaPipe Vision, Tailwind CSS,
-                  Supabase</span
-                >
-              </div>
-            </div>
-          </article>
-
-          <!-- Proyek 02: TaruPramana -->
-          <article
-            class="project-card flex flex-col space-y-6 md:mt-24 transition-state group"
-          >
-            <a
-              href="https://www.tarupramana.web.id"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-visual-link block border border-ink p-3 bg-canvas relative overflow-hidden cursor-pointer"
-              title="Open live project: TaruPramana"
-              aria-label="Launch live deployment of TaruPramana"
-            >
-              <div
-                class="aspect-16-10 overflow-hidden relative bg-lightGray select-none"
-              >
-                <img
-                  src="assets/tarupramana.webp"
-                  alt="TaruPramana Botanical Engine"
-                  width="800"
-                  height="500"
-                  class="w-full h-full object-cover filter grayscale contrast-[105%]"
-                  onerror="
-                    this.src =
-                      'https://placehold.co/960x600/111/fff?text=TaruPramana+Preview'
-                  "
-                  loading="lazy"
-                  decoding="async"
-                />
-                <img
-                  src="assets/tarupramana.webp"
-                  alt=""
-                  width="800"
-                  height="500"
-                  aria-hidden="true"
-                  class="project-color-reveal absolute inset-0 w-full h-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div
-                  class="absolute top-3 right-3 w-7 h-7 bg-ink text-canvas flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                >
-                  ↗
-                </div>
-              </div>
-            </a>
-            <div class="space-y-4">
-              <div
-                class="flex justify-between items-baseline border-b border-lightGray pb-2"
-              >
-                <span class="text-xs uppercase text-mediumGray font-rework"
-                  >Best Capstone Project, DBS Foundation 2026</span
-                >
-                <span class="text-xs font-mono text-mediumGray">#02</span>
-              </div>
-              <h3
-                class="text-xl sm:text-2xl font-light font-avec-sharp text-ink"
-              >
-                <a
-                  href="https://www.tarupramana.web.id"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="hover:text-mediumGray transition-state inline-flex items-baseline gap-1"
-                >
-                  <span>TaruPramana</span>
-                  <span class="text-xs font-rework opacity-60">↗</span>
-                </a>
-              </h3>
-              <div
-                class="inline-flex items-center gap-2 border border-ink/20 px-2.5 py-1 text-xs font-rework text-ink bg-lightGray/30"
-              >
-                <span class="font-semibold uppercase tracking-wider text-[10px]"
-                  >Role:</span
-                >
-                <span>Project Manager &amp; System Architect</span>
-              </div>
-              <p
-                class="text-xs md:text-sm text-mediumGray leading-relaxed font-rework"
-              >
-                An AI-assisted botanical recommendation system parsing
-                centuries-old Balinese Taru Pramana lontar manuscripts into a
-                normalized relational format, enabling instant symptom-to-remedy
-                queries.
-              </p>
-              <div class="text-xs text-ink font-semibold font-rework">
-                Stack:
-                <span class="font-normal text-mediumGray"
-                  >React, Express.js, OpenAI API, Tailwind CSS</span
-                >
-              </div>
-            </div>
-          </article>
-
-          <!-- Proyek 03: Renty -->
-          <article
-            class="project-card flex flex-col space-y-6 transition-state group"
-          >
-            <a
-              href="https://renty.kasuma.id"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-visual-link block border border-ink p-3 bg-canvas relative overflow-hidden cursor-pointer"
-              title="Open live project: Renty"
-              aria-label="Launch live deployment of Renty"
-            >
-              <div
-                class="aspect-16-10 overflow-hidden relative bg-lightGray select-none"
-              >
-                <img
-                  src="assets/renty.webp"
-                  alt="Renty Property SaaS Platform"
-                  width="800"
-                  height="500"
-                  class="w-full h-full object-cover filter grayscale contrast-[105%]"
-                  onerror="
-                    this.src =
-                      'https://placehold.co/960x600/111/fff?text=Renty+Preview'
-                  "
-                  loading="lazy"
-                  decoding="async"
-                />
-                <img
-                  src="assets/renty.webp"
-                  alt=""
-                  width="800"
-                  height="500"
-                  aria-hidden="true"
-                  class="project-color-reveal absolute inset-0 w-full h-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div
-                  class="absolute top-3 right-3 w-7 h-7 bg-ink text-canvas flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                >
-                  ↗
-                </div>
-              </div>
-            </a>
-            <div class="space-y-4">
-              <div
-                class="flex justify-between items-baseline border-b border-lightGray pb-2"
-              >
-                <span class="text-xs uppercase text-mediumGray font-rework"
-                  >Property Management &amp; SaaS</span
-                >
-                <span class="text-xs font-mono text-mediumGray">#03</span>
-              </div>
-              <h3
-                class="text-xl sm:text-2xl font-light font-avec-sharp text-ink"
-              >
-                <a
-                  href="https://renty.kasuma.id"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="hover:text-mediumGray transition-state inline-flex items-baseline gap-1"
-                >
-                  <span>Renty</span>
-                  <span class="text-xs font-rework opacity-60">↗</span>
-                </a>
-              </h3>
-              <div
-                class="inline-flex items-center gap-2 border border-ink/20 px-2.5 py-1 text-xs font-rework text-ink bg-lightGray/30"
-              >
-                <span class="font-semibold uppercase tracking-wider text-[10px]"
-                  >Role:</span
-                >
-                <span>Backend Developer</span>
-              </div>
-              <p
-                class="text-xs md:text-sm text-mediumGray leading-relaxed font-rework"
-              >
-                A multi-tenant property management platform automating lease
-                agreements, payment verification with Midtrans gateway
-                integration, and financial ledger consolidation.
-              </p>
-              <div class="text-xs text-ink font-semibold font-rework">
-                Stack:
-                <span class="font-normal text-mediumGray"
-                  >Laravel, MySQL, Midtrans API, Tailwind CSS, React</span
-                >
-              </div>
-            </div>
-          </article>
-
-          <!-- Proyek 04: Rare Angon -->
-          <article
-            class="project-card flex flex-col space-y-6 md:mt-24 transition-state group"
-          >
-            <a
-              href="https://rareangon.kasuma.id"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="project-visual-link block border border-ink p-3 bg-canvas relative overflow-hidden cursor-pointer"
-              title="Open live project: Rare Angon"
-              aria-label="Launch live deployment of Rare Angon"
-            >
-              <div
-                class="aspect-16-10 overflow-hidden relative bg-lightGray select-none"
-              >
-                <img
-                  src="assets/rareangon.webp"
-                  alt="Rare Angon: The Sky Runner"
-                  width="800"
-                  height="500"
-                  class="w-full h-full object-cover filter grayscale contrast-[105%]"
-                  onerror="
-                    this.src =
-                      'https://placehold.co/960x600/111/fff?text=Rare+Angon+Preview'
-                  "
-                  loading="lazy"
-                  decoding="async"
-                />
-                <img
-                  src="assets/rareangon.webp"
-                  alt=""
-                  width="800"
-                  height="500"
-                  aria-hidden="true"
-                  class="project-color-reveal absolute inset-0 w-full h-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div
-                  class="absolute top-3 right-3 w-7 h-7 bg-ink text-canvas flex items-center justify-center text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                >
-                  ↗
-                </div>
-              </div>
-            </a>
-            <div class="space-y-4">
-              <div
-                class="flex justify-between items-baseline border-b border-lightGray pb-2"
-              >
-                <span class="text-xs uppercase text-mediumGray font-rework"
-                  >Gesture-Controlled Web Game</span
-                >
-                <span class="text-xs font-mono text-mediumGray">#04</span>
-              </div>
-              <h3
-                class="text-xl sm:text-2xl font-light font-avec-sharp text-ink"
-              >
-                <a
-                  href="https://rareangon.kasuma.id"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="hover:text-mediumGray transition-state inline-flex items-baseline gap-1"
-                >
-                  <span>Rare Angon: The Sky Runner</span>
-                  <span class="text-xs font-rework opacity-60">↗</span>
-                </a>
-              </h3>
-              <div
-                class="inline-flex items-center gap-2 border border-ink/20 px-2.5 py-1 text-xs font-rework text-ink bg-lightGray/30"
-              >
-                <span class="font-semibold uppercase tracking-wider text-[10px]"
-                  >Role:</span
-                >
-                <span>Game &amp; Creative Developer</span>
-              </div>
-              <p
-                class="text-xs md:text-sm text-mediumGray leading-relaxed font-rework"
-              >
-                A 2D web arcade game celebrating Balinese kite culture,
-                controlled via real-time skeletal hand tracking on standard
-                webcams without external controllers.
-              </p>
-              <div class="text-xs text-ink font-semibold font-rework">
-                Stack:
-                <span class="font-normal text-mediumGray"
-                  >JavaScript, TensorFlow.js, MediaPipe, HTML5 Canvas</span
-                >
-              </div>
-            </div>
-          </article>
+          <!-- Dynamic Project Cards Rendered via PROJECTS_DATA in Script -->
         </div>
       </section>
 
-      <!-- About Section (Foto Profil Terpasang Efek Radial Hover Halus) -->
+      <!-- About Section -->
       <section
         id="about"
-        class="py-20 sm:py-28 px-4 sm:px-8 md:px-12 border-b border-lightGray"
+        class="section-pad"
+        style="border-bottom: 1px solid var(--light-gray)"
+        aria-labelledby="about-heading"
       >
         <div
-          class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start"
+          style="
+            display: grid;
+            grid-template-columns: repeat(
+              auto-fit,
+              minmax(min(100%, 360px), 1fr)
+            );
+            gap: clamp(2.5rem, 5vw, 4rem);
+            align-items: start;
+          "
         >
-          <div class="lg:col-span-5 space-y-8">
+          <div style="display: flex; flex-direction: column; gap: 2rem">
             <div
-              class="profile-visual-box border border-ink p-3 bg-canvas group cursor-pointer relative overflow-hidden"
+              class="profile-visual-box"
+              style="
+                border: 1px solid var(--ink);
+                padding: 0.75rem;
+                background-color: var(--canvas);
+              "
             >
-              <div
-                class="aspect-3-4 overflow-hidden relative bg-lightGray select-none"
-              >
-                <!-- Base Grayscale Image -->
+              <div class="project-visual-box aspect-3-4">
                 <img
                   src="assets/profile.webp"
                   alt="Portrait of I Gede Kasuma Dana"
                   width="600"
                   height="800"
-                  class="w-full h-full object-cover filter grayscale contrast-[105%]"
+                  class="project-visual-img"
                   onerror="
                     this.src =
                       'https://placehold.co/600x800/111/fff?text=Kasuma+Dana'
@@ -823,83 +932,72 @@
                   loading="lazy"
                   decoding="async"
                 />
-                <!-- Radial Color Reveal Layer -->
-                <img
-                  src="assets/profile.webp"
-                  alt=""
-                  width="600"
-                  height="800"
-                  aria-hidden="true"
-                  class="project-color-reveal absolute inset-0 w-full h-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
               </div>
               <div
-                class="flex justify-between items-center mt-3 text-xs text-mediumGray font-rework"
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-top: 0.75rem;
+                  font-size: 0.75rem;
+                "
+                class="text-mediumGray font-rework"
               >
-                <span class="font-medium text-ink">I Gede Kasuma Dana</span>
+                <span style="font-weight: 500; color: var(--ink)"
+                  >I Gede Kasuma Dana</span
+                >
                 <span>Denpasar, Bali</span>
               </div>
             </div>
-
-            <div class="border border-lightGray p-6">
-              <h3 class="text-base font-light font-avec-sharp text-ink mb-2">
-                Ensemble Practice &amp; Engineering Discipline
-              </h3>
-              <p class="text-xs text-mediumGray leading-relaxed font-rework">
-                As a reong player performing traditional Balinese gamelan with
-                Sanggar Drupadi and the Palawara ensemble at the Bali Arts
-                Festival (Ardha Candra, Denpasar), I practiced precise rhythmic
-                cadence and tight synchronization. This structural discipline
-                directly informs how I organize software dependencies, modular
-                codebases, and team workflows.
-              </p>
-            </div>
           </div>
 
-          <div class="lg:col-span-7 space-y-8 lg:pl-4">
-            <h2
-              class="text-2xl sm:text-3xl md:text-4xl font-light font-avec-sharp leading-snug"
-            >
-              Software engineering student focused on modular web applications
-              and applied machine learning.
+          <div style="display: flex; flex-direction: column; gap: 2rem">
+            <h2 id="about-heading" class="h2 text-ink">
+              Web applications &amp; applied machine learning.
             </h2>
 
             <p
-              class="text-base leading-relaxed text-ink font-light font-avec-sharp"
+              style="font-size: 1rem; line-height: 1.7; font-weight: 300"
+              class="text-ink font-avec-sharp"
             >
-              I am a Software Engineering student at SMK Negeri 1 Denpasar,
-              Bali. My practical focus spans full-stack web applications,
-              client-side computer vision interfaces, and structured database
-              design. My commitment to systematic learning has earned
-              back-to-back
-              <strong class="font-semibold text-ink"
-                >Distinction Graduate honors at Coding Camp powered by DBS
-                Foundation &amp; Dicoding (2025 and 2026)</strong
-              >.
+              I am a Software Engineering student at SMK Negeri 1 Denpasar, Bali, currently completing my industrial PKL internship. Alongside my internship, I build web systems for competitions and hackathons—focusing on AI integrations (LLMs, MediaPipe vision), SaaS platforms, and UI/UX-driven web applications developed collaboratively with my team.
             </p>
 
-            <p class="text-sm text-mediumGray leading-relaxed font-rework">
-              I prioritize clean state boundaries, type safety, predictable API
-              communication, and accessible interface design. Whether delivering
-              course projects individually or collaborating within student
-              development teams, I focus on solving concrete technical problems
-              with maintainable implementations.
+            <p class="text-mediumGray font-rework" style="font-size: 0.875rem">
+              I prioritize clean code structure, type safety, and intuitive user experiences. My work has earned back-to-back
+              <strong style="font-weight: 600; color: var(--ink)"
+                >Distinction Graduate honors at Coding Camp by DBS Foundation &amp; Dicoding (2025 &amp; 2026)</strong
+              >
+              and 2nd Place in LKS Web Technology Bali.
             </p>
 
-            <div class="pt-8 border-t border-lightGray">
-              <h3 class="text-base font-light font-avec-sharp text-ink mb-6">
+            <div
+              style="padding-top: 2rem; border-top: 1px solid var(--light-gray)"
+            >
+              <h3 class="h4 text-ink" style="margin-bottom: 1.5rem">
                 Education &amp; Industry Programs
               </h3>
-              <div id="education-timeline" class="space-y-6">
+              <div
+                id="education-timeline"
+                style="display: flex; flex-direction: column; gap: 1.5rem"
+              >
                 <div
-                  class="border-b border-lightGray pb-4 hover:border-ink transition-state"
+                  style="
+                    border-bottom: 1px solid var(--light-gray);
+                    padding-bottom: 1rem;
+                  "
                 >
                   <div
-                    class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1 gap-1"
+                    style="
+                      display: flex;
+                      flex-wrap: wrap;
+                      justify-content: space-between;
+                      align-items: baseline;
+                      margin-bottom: 0.25rem;
+                      gap: 0.25rem;
+                    "
                   >
-                    <h4 class="text-sm font-semibold text-ink font-rework">
+                    <h4 class="h4 text-ink">
                       SMK Negeri 1 Denpasar: Software Engineering (RPL)
                     </h4>
                     <span
@@ -907,9 +1005,7 @@
                       >2024 - Present</span
                     >
                   </div>
-                  <p
-                    class="text-xs text-mediumGray font-rework leading-relaxed"
-                  >
+                  <p class="text-xs text-mediumGray font-rework">
                     Coursework in full-stack architecture, algorithms,
                     relational databases, and enterprise testing. 2nd Place LKS
                     Web Technology Bali 2026.
@@ -917,12 +1013,22 @@
                 </div>
 
                 <div
-                  class="border-b border-lightGray pb-4 hover:border-ink transition-state"
+                  style="
+                    border-bottom: 1px solid var(--light-gray);
+                    padding-bottom: 1rem;
+                  "
                 >
                   <div
-                    class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1 gap-1"
+                    style="
+                      display: flex;
+                      flex-wrap: wrap;
+                      justify-content: space-between;
+                      align-items: baseline;
+                      margin-bottom: 0.25rem;
+                      gap: 0.25rem;
+                    "
                   >
-                    <h4 class="text-sm font-semibold text-ink font-rework">
+                    <h4 class="h4 text-ink">
                       Coding Camp by DBS Foundation &amp; Dicoding
                     </h4>
                     <span
@@ -930,9 +1036,7 @@
                       >2025 &amp; 2026</span
                     >
                   </div>
-                  <p
-                    class="text-xs text-mediumGray font-rework leading-relaxed"
-                  >
+                  <p class="text-xs text-mediumGray font-rework">
                     Graduated consecutively with Distinction Honors across
                     Frontend and Backend development learning paths. Winner of
                     Best Capstone Project 2026.
@@ -940,12 +1044,22 @@
                 </div>
 
                 <div
-                  class="border-b border-lightGray pb-4 hover:border-ink transition-state"
+                  style="
+                    border-bottom: 1px solid var(--light-gray);
+                    padding-bottom: 1rem;
+                  "
                 >
                   <div
-                    class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1 gap-1"
+                    style="
+                      display: flex;
+                      flex-wrap: wrap;
+                      justify-content: space-between;
+                      align-items: baseline;
+                      margin-bottom: 0.25rem;
+                      gap: 0.25rem;
+                    "
                   >
-                    <h4 class="text-sm font-semibold text-ink font-rework">
+                    <h4 class="h4 text-ink">
                       Industrial Workshops &amp; Applied AI Training
                     </h4>
                     <span
@@ -953,9 +1067,7 @@
                       >2025 - 2026</span
                     >
                   </div>
-                  <p
-                    class="text-xs text-mediumGray font-rework leading-relaxed"
-                  >
+                  <p class="text-xs text-mediumGray font-rework">
                     Completed hands-on data mining programs at Primakara
                     University and competitive Web Technology training tracks.
                   </p>
@@ -969,13 +1081,23 @@
       <!-- Credentials Section -->
       <section
         id="credentials"
-        class="py-20 sm:py-28 px-4 sm:px-8 md:px-12 border-b border-lightGray"
+        class="section-pad"
+        style="border-bottom: 1px solid var(--light-gray)"
+        aria-labelledby="credentials-heading"
       >
         <div
-          class="flex justify-between items-baseline border-b border-ink pb-4 mb-12 sm:mb-16"
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px solid var(--ink);
+            padding-bottom: 1rem;
+            margin-bottom: clamp(2.5rem, 5vw, 4rem);
+          "
         >
           <h2
-            class="text-2xl sm:text-3xl md:text-4xl font-normal font-rework tracking-tight uppercase"
+            id="credentials-heading"
+            class="h2 uppercase font-rework font-normal"
           >
             Credentials
           </h2>
@@ -985,28 +1107,46 @@
         </div>
 
         <div
-          class="border border-ink p-6 md:p-8 mb-16 flex flex-col md:flex-row md:items-center justify-between gap-6 bg-canvas"
+          style="
+            border: 1px solid var(--ink);
+            padding: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: clamp(2.5rem, 5vw, 4rem);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            background-color: var(--canvas);
+          "
         >
-          <div class="space-y-1">
-            <h3 class="text-xl font-light font-avec-sharp text-ink">
-              Verified Technical Resume
-            </h3>
-            <p
-              class="text-xs md:text-sm text-mediumGray font-rework max-w-xl leading-relaxed"
-            >
-              Contains a concise breakdown of competition records, production
-              implementations, verified course certifications, and contact
-              channels for recruitment teams.
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 0.25rem;
+              max-width: 36rem;
+            "
+          >
+            <h3 class="h3 text-ink">Verified Technical Resume</h3>
+            <p class="text-mediumGray font-rework" style="font-size: 0.875rem">
+              Summary of technical skills, competition records, completed
+              projects, and verified certifications.
             </p>
           </div>
           <a
             href="assets/resume.pdf"
             download="Resume_I_Gede_Kasuma_Dana.pdf"
-            class="inline-flex items-center justify-center gap-2 border border-ink bg-ink text-canvas px-6 py-3 text-xs uppercase font-rework tracking-wider hover:bg-canvas hover:text-ink transition-state shrink-0 min-h-[44px]"
+            class="inline-flex items-center justify-center border border-ink text-white text-xs uppercase font-rework tracking-wider transition-state shrink-0 min-h-[44px]"
+            style="
+              background-color: var(--ink);
+              color: #ffffff;
+              gap: 0.5rem;
+              padding: 0.75rem 1.5rem;
+            "
           >
             <span>Download Resume (PDF)</span>
             <svg
-              class="w-4 h-4"
+              class="icon-md"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -1022,107 +1162,249 @@
           </a>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-          <div class="lg:col-span-6 space-y-6">
-            <h3 class="text-base font-light font-avec-sharp text-ink mb-4">
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(
+              auto-fit,
+              minmax(min(100%, 360px), 1fr)
+            );
+            gap: clamp(2.5rem, 5vw, 4rem);
+          "
+        >
+          <!-- Competitions -->
+          <div style="display: flex; flex-direction: column; gap: 1.5rem">
+            <h3
+              class="h4 text-ink"
+              style="
+                border-bottom: 1px solid var(--light-gray);
+                padding-bottom: 0.5rem;
+              "
+            >
               Competitions &amp; Honors
             </h3>
             <div
               id="achievements-list"
-              class="divide-y divide-lightGray border-y border-lightGray"
+              style="display: flex; flex-direction: column"
             >
               <div
-                class="flex justify-between items-center py-3.5 hover:bg-canvas transition-state"
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding: 0.875rem 0;
+                  border-bottom: 1px solid var(--light-gray);
+                "
               >
-                <span class="text-xs md:text-sm text-ink font-rework pr-2"
+                <span
+                  class="text-xs md:text-sm text-ink font-rework"
+                  style="padding-right: 0.5rem"
                   >2nd Place LKS Web Technology (Bali Province)</span
                 >
-                <div class="flex items-center gap-3 shrink-0">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    flex-shrink: 0;
+                  "
+                >
                   <span class="text-xs text-mediumGray font-rework"
                     >Silver Medal</span
                   >
                   <span
-                    class="text-[10px] bg-ink text-canvas px-2 py-0.5 font-mono"
+                    style="
+                      font-size: 0.75rem;
+                      background: var(--ink);
+                      color: var(--canvas);
+                      padding: 0.125rem 0.5rem;
+                    "
+                    class="font-mono"
                     >2026</span
                   >
                 </div>
               </div>
               <div
-                class="flex justify-between items-center py-3.5 hover:bg-canvas transition-state"
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding: 0.875rem 0;
+                  border-bottom: 1px solid var(--light-gray);
+                "
               >
-                <span class="text-xs md:text-sm text-ink font-rework pr-2"
+                <span
+                  class="text-xs md:text-sm text-ink font-rework"
+                  style="padding-right: 0.5rem"
                   >Best Capstone Project (Coding Camp DBS Foundation)</span
                 >
-                <div class="flex items-center gap-3 shrink-0">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    flex-shrink: 0;
+                  "
+                >
                   <span class="text-xs text-mediumGray font-rework"
                     >Overall Winner</span
                   >
                   <span
-                    class="text-[10px] bg-ink text-canvas px-2 py-0.5 font-mono"
+                    style="
+                      font-size: 0.75rem;
+                      background: var(--ink);
+                      color: var(--canvas);
+                      padding: 0.125rem 0.5rem;
+                    "
+                    class="font-mono"
                     >2026</span
                   >
                 </div>
               </div>
               <div
-                class="flex justify-between items-center py-3.5 hover:bg-canvas transition-state"
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding: 0.875rem 0;
+                  border-bottom: 1px solid var(--light-gray);
+                "
               >
-                <span class="text-xs md:text-sm text-ink font-rework pr-2"
+                <span
+                  class="text-xs md:text-sm text-ink font-rework"
+                  style="padding-right: 0.5rem"
                   >Distinction Graduate (Coding Camp DBS Foundation)</span
                 >
-                <div class="flex items-center gap-3 shrink-0">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    flex-shrink: 0;
+                  "
+                >
                   <span class="text-xs text-mediumGray font-rework"
                     >Highest Honors</span
                   >
                   <span
-                    class="text-[10px] bg-ink text-canvas px-2 py-0.5 font-mono"
+                    style="
+                      font-size: 0.75rem;
+                      background: var(--ink);
+                      color: var(--canvas);
+                      padding: 0.125rem 0.5rem;
+                    "
+                    class="font-mono"
                     >2026</span
                   >
                 </div>
               </div>
               <div
-                class="flex justify-between items-center py-3.5 hover:bg-canvas transition-state"
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding: 0.875rem 0;
+                  border-bottom: 1px solid var(--light-gray);
+                "
               >
-                <span class="text-xs md:text-sm text-ink font-rework pr-2"
+                <span
+                  class="text-xs md:text-sm text-ink font-rework"
+                  style="padding-right: 0.5rem"
                   >Distinction Graduate (Coding Camp DBS Foundation)</span
                 >
-                <div class="flex items-center gap-3 shrink-0">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    flex-shrink: 0;
+                  "
+                >
                   <span class="text-xs text-mediumGray font-rework"
                     >Highest Honors</span
                   >
                   <span
-                    class="text-[10px] bg-ink text-canvas px-2 py-0.5 font-mono"
+                    style="
+                      font-size: 0.75rem;
+                      background: var(--ink);
+                      color: var(--canvas);
+                      padding: 0.125rem 0.5rem;
+                    "
+                    class="font-mono"
                     >2025</span
                   >
                 </div>
               </div>
               <div
-                class="flex justify-between items-center py-3.5 hover:bg-canvas transition-state"
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding: 0.875rem 0;
+                  border-bottom: 1px solid var(--light-gray);
+                "
               >
-                <span class="text-xs md:text-sm text-ink font-rework pr-2"
+                <span
+                  class="text-xs md:text-sm text-ink font-rework"
+                  style="padding-right: 0.5rem"
                   >1st Place Regional IT Quiz Competition</span
                 >
-                <div class="flex items-center gap-3 shrink-0">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    flex-shrink: 0;
+                  "
+                >
                   <span class="text-xs text-mediumGray font-rework"
                     >1st Winner</span
                   >
                   <span
-                    class="text-[10px] bg-ink text-canvas px-2 py-0.5 font-mono"
+                    style="
+                      font-size: 0.75rem;
+                      background: var(--ink);
+                      color: var(--canvas);
+                      padding: 0.125rem 0.5rem;
+                    "
+                    class="font-mono"
                     >2025</span
                   >
                 </div>
               </div>
               <div
-                class="flex justify-between items-center py-3.5 hover:bg-canvas transition-state"
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding: 0.875rem 0;
+                  border-bottom: 1px solid var(--light-gray);
+                "
               >
-                <span class="text-xs md:text-sm text-ink font-rework pr-2"
+                <span
+                  class="text-xs md:text-sm text-ink font-rework"
+                  style="padding-right: 0.5rem"
                   >2nd Place AI Website Competition (YCWC)</span
                 >
-                <div class="flex items-center gap-3 shrink-0">
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    flex-shrink: 0;
+                  "
+                >
                   <span class="text-xs text-mediumGray font-rework"
                     >Silver Medal</span
                   >
                   <span
-                    class="text-[10px] bg-ink text-canvas px-2 py-0.5 font-mono"
+                    style="
+                      font-size: 0.75rem;
+                      background: var(--ink);
+                      color: var(--canvas);
+                      padding: 0.125rem 0.5rem;
+                    "
+                    class="font-mono"
                     >2025</span
                   >
                 </div>
@@ -1130,17 +1412,27 @@
             </div>
           </div>
 
-          <div class="lg:col-span-6 space-y-6">
-            <h3 class="text-base font-light font-avec-sharp text-ink mb-4">
+          <!-- Technical Capabilities -->
+          <div style="display: flex; flex-direction: column; gap: 1.5rem">
+            <h3
+              class="h4 text-ink"
+              style="
+                border-bottom: 1px solid var(--light-gray);
+                padding-bottom: 0.5rem;
+              "
+            >
               Technical Capabilities
             </h3>
-            <div
-              id="skills-list"
-              class="divide-y divide-lightGray border-y border-lightGray"
-            >
-              <div class="py-3.5">
+            <div id="skills-list" style="display: flex; flex-direction: column">
+              <div
+                style="
+                  padding: 0.875rem 0;
+                  border-bottom: 1px solid var(--light-gray);
+                "
+              >
                 <span
-                  class="text-xs font-semibold text-ink font-rework block mb-0.5"
+                  class="text-xs font-semibold text-ink font-rework"
+                  style="display: block; margin-bottom: 0.25rem"
                   >Frontend Ecosystem</span
                 >
                 <span class="text-xs md:text-sm text-mediumGray font-rework"
@@ -1148,9 +1440,15 @@
                   CSS3</span
                 >
               </div>
-              <div class="py-3.5">
+              <div
+                style="
+                  padding: 0.875rem 0;
+                  border-bottom: 1px solid var(--light-gray);
+                "
+              >
                 <span
-                  class="text-xs font-semibold text-ink font-rework block mb-0.5"
+                  class="text-xs font-semibold text-ink font-rework"
+                  style="display: block; margin-bottom: 0.25rem"
                   >Backend &amp; Database</span
                 >
                 <span class="text-xs md:text-sm text-mediumGray font-rework"
@@ -1158,18 +1456,30 @@
                   APIs</span
                 >
               </div>
-              <div class="py-3.5">
+              <div
+                style="
+                  padding: 0.875rem 0;
+                  border-bottom: 1px solid var(--light-gray);
+                "
+              >
                 <span
-                  class="text-xs font-semibold text-ink font-rework block mb-0.5"
+                  class="text-xs font-semibold text-ink font-rework"
+                  style="display: block; margin-bottom: 0.25rem"
                   >AI &amp; Computer Vision</span
                 >
                 <span class="text-xs md:text-sm text-mediumGray font-rework"
                   >MediaPipe Vision, TensorFlow.js, OpenAI API, Python</span
                 >
               </div>
-              <div class="py-3.5">
+              <div
+                style="
+                  padding: 0.875rem 0;
+                  border-bottom: 1px solid var(--light-gray);
+                "
+              >
                 <span
-                  class="text-xs font-semibold text-ink font-rework block mb-0.5"
+                  class="text-xs font-semibold text-ink font-rework"
+                  style="display: block; margin-bottom: 0.25rem"
                   >Workflow &amp; Infrastructure</span
                 >
                 <span class="text-xs md:text-sm text-mediumGray font-rework"
@@ -1185,35 +1495,62 @@
       <!-- Contact Section -->
       <section
         id="contact"
-        class="py-20 sm:py-28 px-4 sm:px-8 md:px-12 bg-canvas pb-32 sm:pb-36"
+        class="section-pad bg-canvas"
+        style="padding-bottom: clamp(6rem, 10vw, 9rem)"
+        aria-labelledby="contact-heading"
       >
-        <div class="max-w-5xl space-y-10 sm:space-y-12">
-          <h2
-            class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-light font-avec-sharp leading-tight text-ink"
-          >
-            Open for software engineering internships, technical
-            apprenticeships, and collaborative student projects.
+        <div
+          style="
+            max-width: 64rem;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(2rem, 4vw, 3rem);
+          "
+        >
+          <h2 id="contact-heading" class="h2 text-ink" style="line-height: 1.3">
+            Open for freelance projects, competition collaborations, and technology discussions.
           </h2>
 
-          <div class="pt-2 sm:pt-4 space-y-4">
-            <div class="flex flex-wrap items-center gap-4 sm:gap-6">
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+              padding-top: 1rem;
+            "
+          >
+            <div
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 1.5rem;
+              "
+            >
               <a
                 href="mailto:contact@kasuma.id"
-                class="break-all text-xl sm:text-3xl md:text-4xl font-light font-avec-sharp text-ink hover:text-mediumGray border-b-2 border-ink hover:border-mediumGray pb-1 transition-state"
+                class="text-ink hover:text-mediumGray transition-state font-avec-sharp"
+                style="
+                  font-size: clamp(1.25rem, 3.5vw, 2.25rem);
+                  font-weight: 300;
+                  border-bottom: 2px solid var(--ink);
+                  padding-bottom: 0.25rem;
+                  word-break: break-all;
+                "
               >
                 contact@kasuma.id ↗
               </a>
               <button
                 type="button"
                 id="copyEmailBtn"
-                onclick="copyEmailAddress()"
-                class="border border-ink px-4 py-2.5 text-xs uppercase font-rework hover:bg-ink hover:text-canvas transition-state min-h-[44px] flex items-center gap-2 cursor-pointer"
-                aria-label="Copy Address"
+                class="border border-ink text-xs uppercase font-rework transition-state min-h-[44px] flex items-center cursor-pointer bg-canvas text-ink"
+                style="gap: 0.5rem; padding: 0.625rem 1rem"
+                aria-label="Copy Email Address to clipboard"
               >
                 <span id="copyBtnText">Copy Address</span>
                 <svg
                   id="copyIcon"
-                  class="w-3.5 h-3.5"
+                  class="icon-sm"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -1228,59 +1565,66 @@
                 </svg>
               </button>
             </div>
-            <p id="copyNotice" class="text-xs font-mono text-mediumGray hidden">
+            <p
+              id="copyNotice"
+              class="text-xs font-mono text-mediumGray"
+              style="display: none"
+              role="status"
+              aria-live="polite"
+            >
               Email copied to clipboard.
             </p>
           </div>
 
           <div
-            class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 sm:pt-16 border-t border-lightGray"
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+              gap: 1.5rem;
+              padding-top: 3rem;
+              border-top: 1px solid var(--light-gray);
+            "
           >
-            <div class="space-y-1">
-              <span class="text-xs text-mediumGray font-rework block"
-                >GitHub</span
-              >
+            <div style="display: flex; flex-direction: column; gap: 0.25rem">
+              <span class="text-xs text-mediumGray font-rework">GitHub</span>
               <a
                 href="https://github.com/kasumadana"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-sm font-semibold hover:underline"
+                class="text-sm font-semibold text-ink hover:underline min-h-[44px] inline-flex items-center"
               >
                 @kasumadana ↗
               </a>
             </div>
-            <div class="space-y-1">
-              <span class="text-xs text-mediumGray font-rework block"
-                >LinkedIn</span
-              >
+            <div style="display: flex; flex-direction: column; gap: 0.25rem">
+              <span class="text-xs text-mediumGray font-rework">LinkedIn</span>
               <a
                 href="https://www.linkedin.com/in/kasumadana/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-sm font-semibold hover:underline"
+                class="text-sm font-semibold text-ink hover:underline min-h-[44px] inline-flex items-center"
               >
                 in/kasumadana ↗
               </a>
             </div>
-            <div class="space-y-1">
-              <span class="text-xs text-mediumGray font-rework block"
+            <div style="display: flex; flex-direction: column; gap: 0.25rem">
+              <span class="text-xs text-mediumGray font-rework"
                 >Canonical Domain</span
               >
               <a
                 href="https://me.kasuma.id/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-sm font-semibold hover:underline"
+                class="text-sm font-semibold text-ink hover:underline min-h-[44px] inline-flex items-center"
               >
                 kasuma.id ↗
               </a>
             </div>
-            <div class="space-y-1">
-              <span class="text-xs text-mediumGray font-rework block"
-                >Status</span
-              >
-              <span class="text-sm font-semibold text-ink"
-                >Student Available 2026</span
+            <div style="display: flex; flex-direction: column; gap: 0.25rem">
+              <span class="text-xs text-mediumGray font-rework">Status</span>
+              <span
+                class="text-sm font-semibold text-ink min-h-[44px] inline-flex items-center"
+                >Available for Freelance</span
               >
             </div>
           </div>
@@ -1288,7 +1632,7 @@
       </section>
     </main>
 
-    <!-- Skrip Pustaka Non-Blocking -->
+    <!-- Optional Animation Libraries (Deferred with Graceful Degradation) -->
     <script
       src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"
       crossorigin="anonymous"
@@ -1305,96 +1649,201 @@
       defer
     ></script>
 
-    <!-- Logika Antarmuka Pengguna & GSAP Tweening Halus -->
-    <script type="text/javascript">
+    <!-- Unobtrusive Script Logic -->
+    <script>
+      /**
+       * Dynamic Projects Configuration
+       * Untuk menambahkan, menghapus, atau mengubah proyek dan tautannya:
+       * - demoUrl: URL live demo (jika dikosongkan/null/undefined, tombol "Live Demo" otomatis TIDAK ditampilkan)
+       * - repoUrl: URL repositori GitHub (jika dikosongkan/null/undefined, tombol "Source Code" otomatis TIDAK ditampilkan)
+       */
+      const PROJECTS_DATA = [
+        {
+          id: "01",
+          category: "Applied Computer Vision & AI",
+          title: "Aksa: Adaptive Kinesthetic Learning Platform",
+          role: "Full Stack Developer",
+          description:
+            "Interactive learning platform with touch-free hand-gesture controls and voice interactions, allowing students to study course modules and complete quizzes via webcam.",
+          stack:
+            "Next.js, TypeScript, MediaPipe Vision, Tailwind CSS, Supabase",
+          image: "assets/aksa.webp",
+          fallbackImage:
+            "https://placehold.co/960x600/111/fff?text=Aksa+Preview",
+          alt: "Aksa: Adaptive Kinesthetic Learning Platform interface demo",
+          demoUrl: "https://aksa.kasuma.id",
+          repoUrl: "",
+        },
+        {
+          id: "02",
+          category: "Best Capstone Project, DBS Foundation 2026",
+          title: "TaruPramana: Botanical Recommendation Engine",
+          role: "Project Manager & System Architect",
+          description:
+            "Botanical recommendation engine parsing traditional Balinese Taru Pramana lontar manuscripts into a relational database for symptom-to-remedy lookups.",
+          stack: "React, Express.js, OpenAI API, Tailwind CSS",
+          image: "assets/tarupramana.webp",
+          fallbackImage:
+            "https://placehold.co/960x600/111/fff?text=TaruPramana+Preview",
+          alt: "TaruPramana Botanical Engine interface demo",
+          demoUrl: "https://www.tarupramana.web.id",
+          repoUrl: "",
+        },
+        {
+          id: "03",
+          category: "Property Management & SaaS",
+          title: "Renty: Multi-Tenant Property SaaS",
+          role: "Backend Developer",
+          description:
+            "Multi-tenant rental management platform with automated lease agreements, Midtrans payment gateway integration, and revenue tracking.",
+          stack: "Laravel, MySQL, Midtrans API, Tailwind CSS, React",
+          image: "assets/renty.webp",
+          fallbackImage:
+            "https://placehold.co/960x600/111/fff?text=Renty+Preview",
+          alt: "Renty Property SaaS Platform interface demo",
+          demoUrl: "",
+          repoUrl: "",
+        },
+        {
+          id: "04",
+          category: "Gesture-Controlled Web Game",
+          title: "Rare Angon: The Sky Runner",
+          role: "Game & Creative Developer",
+          description:
+            "2D browser arcade game based on Balinese kite culture, controlled with real-time webcam hand tracking.",
+          stack: "JavaScript, TensorFlow.js, MediaPipe, HTML5 Canvas",
+          image: "assets/rareangon.webp",
+          fallbackImage:
+            "https://placehold.co/960x600/111/fff?text=Rare+Angon+Preview",
+          alt: "Rare Angon: The Sky Runner gesture-controlled game preview",
+          demoUrl: "https://rareangon.kasuma.id",
+          repoUrl: "https://github.com/kasumadana/rare-angon-sky-runner",
+        },
+      ];
+
+      function renderProjects() {
+        const container = document.getElementById("projects-grid");
+        const counter = document.getElementById("works-counter");
+        if (!container) return;
+
+        if (counter) {
+          const totalCount = String(PROJECTS_DATA.length).padStart(2, "0");
+          counter.textContent = `[${totalCount} Selected Works]`;
+        }
+
+        container.innerHTML = PROJECTS_DATA.map((p) => {
+          const actionLinks = [];
+          if (p.demoUrl && p.demoUrl.trim() !== "") {
+            actionLinks.push(`
+              <a
+                href="${p.demoUrl}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center border border-ink px-3 py-1.5 text-xs font-rework uppercase tracking-wider hover:bg-ink hover:text-canvas transition-state min-h-[44px]"
+                style="gap: 0.25rem;"
+                aria-label="Launch live deployment of ${p.title} (opens in new tab)"
+              >
+                <span>Live Demo ↗</span>
+              </a>
+            `);
+          }
+          if (p.repoUrl && p.repoUrl.trim() !== "") {
+            actionLinks.push(`
+              <a
+                href="${p.repoUrl}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center border border-lightGray px-3 py-1.5 text-xs font-rework uppercase tracking-wider text-mediumGray hover:text-ink hover:border-ink transition-state min-h-[44px]"
+                style="gap: 0.25rem;"
+                aria-label="View source repository of ${p.title} on GitHub (opens in new tab)"
+              >
+                <span>Source Code ↗</span>
+              </a>
+            `);
+          }
+
+          const actionLinksContainer =
+            actionLinks.length > 0
+              ? `<div style="display: flex; align-items: center; gap: 1rem; padding-top: 0.5rem;">
+                ${actionLinks.join("")}
+               </div>`
+              : "";
+
+          return `
+            <article class="project-card" style="display: flex; flex-direction: column; gap: 1.5rem;">
+              <div
+                style="display: block; border: 1px solid var(--ink); padding: 0.75rem; background-color: var(--canvas); position: relative;"
+              >
+                <div class="project-visual-box aspect-16-10">
+                  <img
+                    src="${p.image}"
+                    alt="${p.alt || p.title}"
+                    width="800"
+                    height="500"
+                    class="project-visual-img"
+                    onerror="this.src='${p.fallbackImage || "https://placehold.co/960x600/111/fff?text=Project+Preview"}'"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.875rem;">
+                <div
+                  style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--light-gray); padding-bottom: 0.5rem;"
+                >
+                  <span class="text-xs text-mediumGray font-rework font-medium">${p.category}</span>
+                  <span class="text-xs font-mono text-mediumGray">#${p.id}</span>
+                </div>
+                <h3 class="h3 text-ink">
+                  <span>${p.title}</span>
+                </h3>
+                <div
+                  style="display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid rgba(17,17,17,0.2); padding: 0.25rem 0.625rem; font-size: 0.75rem; width: fit-content; background-color: var(--light-gray);"
+                  class="font-rework text-ink"
+                >
+                  <span style="font-weight: 700; text-transform: uppercase; font-size: 0.75rem;">Role:</span>
+                  <span>${p.role}</span>
+                </div>
+                <p class="text-mediumGray font-rework" style="font-size: 0.875rem;">
+                  ${p.description}
+                </p>
+                <div class="font-rework" style="font-size: 0.75rem; font-weight: 600; color: var(--ink);">
+                  Stack:
+                  <span style="font-weight: 400; color: var(--medium-gray);">${p.stack}</span>
+                </div>
+                ${actionLinksContainer}
+              </div>
+            </article>
+          `;
+        }).join("");
+      }
+
+      // Email Copy Functionality
       function copyEmailAddress() {
-        navigator.clipboard.writeText("contact@kasuma.id").then(() => {
-          const btnText = document.getElementById("copyBtnText");
-          const notice = document.getElementById("copyNotice");
-          btnText.textContent = "Copied!";
-          notice.classList.remove("hidden");
-          setTimeout(() => {
-            btnText.textContent = "Copy Address";
-            notice.classList.add("hidden");
-          }, 3000);
-        });
+        if (!navigator.clipboard) return;
+        navigator.clipboard
+          .writeText("contact@kasuma.id")
+          .then(() => {
+            const btnText = document.getElementById("copyBtnText");
+            const notice = document.getElementById("copyNotice");
+            if (btnText) btnText.textContent = "Copied!";
+            if (notice) notice.style.display = "block";
+            setTimeout(() => {
+              if (btnText) btnText.textContent = "Copy Address";
+              if (notice) notice.style.display = "none";
+            }, 3000);
+          })
+          .catch(() => {});
       }
 
-      function initRadialReveal() {
-        // Ambil kartu proyek dan kartu profil visual
-        const targets = document.querySelectorAll(
-          ".project-visual-link, .profile-visual-box",
-        );
-
-        targets.forEach((card) => {
-          const colorImg = card.querySelector(".project-color-reveal");
-          if (!colorImg) return;
-
-          let anim = null;
-
-          card.addEventListener("mouseenter", (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            colorImg.style.setProperty("--x", `${x}px`);
-            colorImg.style.setProperty("--y", `${y}px`);
-
-            const maxRadius = Math.hypot(
-              Math.max(x, rect.width - x),
-              Math.max(y, rect.height - y),
-            );
-
-            if (anim) anim.kill();
-
-            if (typeof gsap !== "undefined") {
-              const proxy = { r: parseFloat(colorImg.dataset.r || 0) };
-              anim = gsap.to(proxy, {
-                r: maxRadius + 40,
-                duration: 0.85,
-                ease: "power2.out",
-                onUpdate: () => {
-                  colorImg.dataset.r = proxy.r;
-                  colorImg.style.setProperty("--r", `${proxy.r}px`);
-                },
-              });
-            }
-          });
-
-          card.addEventListener("mousemove", (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            colorImg.style.setProperty("--x", `${x}px`);
-            colorImg.style.setProperty("--y", `${y}px`);
-          });
-
-          card.addEventListener("mouseleave", () => {
-            if (anim) anim.kill();
-
-            if (typeof gsap !== "undefined") {
-              const proxy = { r: parseFloat(colorImg.dataset.r || 0) };
-              anim = gsap.to(proxy, {
-                r: 0,
-                duration: 0.6,
-                ease: "power2.inOut",
-                onUpdate: () => {
-                  colorImg.dataset.r = proxy.r;
-                  colorImg.style.setProperty("--r", `${proxy.r}px`);
-                },
-              });
-            }
-          });
-        });
-      }
-
-      function initScrollAndAnimations() {
+      // Smooth Scroll & Animations Setup
+      function initAnimations() {
         const prefersReducedMotion = window.matchMedia(
           "(prefers-reduced-motion: reduce)",
         ).matches;
-
         if (prefersReducedMotion) return;
 
+        // Initialize Lenis Smooth Scroll if available
         if (typeof Lenis !== "undefined") {
           const lenis = new Lenis({
             duration: 1.2,
@@ -1412,6 +1861,7 @@
           }
         }
 
+        // Initialize GSAP ScrollTrigger if available
         if (
           typeof gsap !== "undefined" &&
           typeof ScrollTrigger !== "undefined"
@@ -1428,23 +1878,23 @@
           });
 
           heroTimeline
-            .to("#hero-content", { y: -60, opacity: 0.2, ease: "none" }, 0)
-            .to("#hero-title", { y: -30, opacity: 0.3, ease: "none" }, 0)
-            .to("#hero-bg img", { y: 30, opacity: 0.25, ease: "none" }, 0);
+            .to("#hero-content", { y: -50, opacity: 0.2, ease: "none" }, 0)
+            .to("#hero-title", { y: -25, opacity: 0.3, ease: "none" }, 0)
+            .to("#hero-bg img", { y: 25, opacity: 0.25, ease: "none" }, 0);
 
           const projectCards = document.querySelectorAll(".project-card");
           projectCards.forEach((card) => {
             gsap.fromTo(
               card,
-              { opacity: 0, y: 30 },
+              { opacity: 0, y: 25 },
               {
                 opacity: 1,
                 y: 0,
-                duration: 0.7,
-                ease: "power3.out",
+                duration: 0.6,
+                ease: "power2.out",
                 scrollTrigger: {
                   trigger: card,
-                  start: "top 88%",
+                  start: "top 90%",
                   toggleActions: "play none none none",
                 },
               },
@@ -1453,9 +1903,14 @@
         }
       }
 
+      // DOM Initialization
       window.addEventListener("DOMContentLoaded", () => {
-        initRadialReveal();
-        initScrollAndAnimations();
+        renderProjects();
+        const copyBtn = document.getElementById("copyEmailBtn");
+        if (copyBtn) {
+          copyBtn.addEventListener("click", copyEmailAddress);
+        }
+        initAnimations();
       });
     </script>
   </body>
