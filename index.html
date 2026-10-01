@@ -504,26 +504,155 @@
         width: 100%;
         z-index: 50;
         border-bottom: none;
+        transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      /* Inverted contrast state when scrolled over light canvas/content area */
+      header.site-header.is-light {
+        color: var(--ink);
       }
 
       header.site-header a {
-        color: #ffffff;
-        mix-blend-mode: difference;
+        color: inherit;
         transition:
           opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
-          border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+          color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+          border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       }
 
       header.site-header a:hover {
-        opacity: 0.7;
+        opacity: 0.65;
       }
 
-      /* Hero Specific Styling */
+      /* Hero Specific Styling & Zero-Stretching Image Handling */
       #home {
-        background-color: var(--dark-bg);
-        color: var(--dark-text);
+        background-color: #0b0c0e;
+        color: #ffffff;
         min-height: 100vh;
         min-height: 100dvh;
+        min-height: 100svh;
+        position: relative;
+      }
+
+      .hero-bg-container {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+        overflow: hidden;
+      }
+
+      .hero-bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover !important;
+        object-position: center 25%;
+        opacity: 0.45;
+        mix-blend-mode: screen;
+        transform: scale(1.05);
+        will-change: transform, opacity;
+      }
+
+      .hero-gradient-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(11, 12, 14, 0.2) 0%,
+          rgba(11, 12, 14, 0.55) 50%,
+          rgba(11, 12, 14, 0.95) 90%,
+          #0b0c0e 100%
+        );
+      }
+
+      /* Text Selection */
+      ::selection {
+        background-color: var(--ink);
+        color: var(--canvas);
+      }
+      #home ::selection {
+        background-color: #ffffff;
+        color: #111111;
+      }
+
+      /* Hero Interactive Buttons */
+      .hero-actions {
+        position: relative;
+        z-index: 20;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1.25rem;
+        padding-top: 0.5rem;
+      }
+      .btn-hero-primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0.75rem 1.6rem;
+        background-color: #ffffff;
+        color: #111111;
+        border: 1px solid #ffffff;
+        border-radius: 2px;
+        text-decoration: none;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .btn-hero-primary:hover {
+        background-color: transparent;
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+      }
+      .btn-hero-primary:focus-visible {
+        outline: 2px solid #ffffff;
+        outline-offset: 3px;
+      }
+
+      .btn-hero-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0.75rem 1.6rem;
+        background-color: transparent;
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        border-radius: 2px;
+        text-decoration: none;
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .btn-hero-secondary:hover {
+        background-color: #ffffff;
+        color: #111111;
+        border-color: #ffffff;
+        transform: translateY(-2px);
+      }
+      .btn-hero-secondary:focus-visible {
+        outline: 2px solid #ffffff;
+        outline-offset: 3px;
+      }
+
+      .hero-masthead-text {
+        font-size: clamp(2.75rem, 8.5vw, 6.5rem);
+        line-height: 0.95;
+        letter-spacing: -0.01em;
+        opacity: 0.92;
       }
 
       /* GPU Accelerated Visual Hover */
@@ -608,20 +737,21 @@
         }
       }
 
-      /* Intentional Reduced-Motion Alternative */
+      /* Intentional Reduced-Motion Alternative (Preserves micro-feedback, disables spatial displacement) */
       @media (prefers-reduced-motion: reduce) {
         *,
         *::before,
         *::after {
           animation-duration: 0.001s !important;
           animation-iteration-count: 1 !important;
-          transition-duration: 0.001s !important;
           scroll-behavior: auto !important;
         }
-        .project-visual-img {
+        .hero-bg-img,
+        .project-visual-img,
+        .profile-visual-img {
           filter: grayscale(0%) contrast(100%) !important;
           transform: none !important;
-          transition: none !important;
+          transition: opacity 0.2s ease !important;
         }
       }
     </style>
@@ -716,19 +846,10 @@
     <section
       id="home"
       class="sticky top-0 z-0 w-full flex flex-col justify-between overflow-hidden"
-      style="
-        background: radial-gradient(
-          circle at 50% 30%,
-          #1a1a1a 0%,
-          #111111 100%
-        );
-      "
       aria-label="Introduction &amp; Profile"
     >
-      <div
-        id="hero-bg"
-        class="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden"
-      >
+      <!-- Atmospheric Background & Glow -->
+      <div id="hero-bg" class="hero-bg-container">
         <img
           src="assets/nature.webp"
           alt="Atmospheric landscape texture"
@@ -738,104 +859,93 @@
           loading="eager"
           decoding="async"
           onerror="this.style.display = 'none'"
-          class="w-full h-full object-cover"
-          style="opacity: 0.5; mix-blend-mode: screen; transform: scale(1.05)"
+          class="hero-bg-img"
         />
-        <div
-          class="absolute inset-0"
-          style="
-            background: linear-gradient(
-              to bottom,
-              transparent,
-              rgba(17, 17, 17, 0.4) 50%,
-              rgba(17, 17, 17, 0.95) 100%
-            );
-          "
-        ></div>
+        <div class="hero-gradient-overlay"></div>
       </div>
 
       <!-- Hero Lead Context: Author Identity & Mission -->
       <div
         id="hero-content"
-        class="relative z-10 w-full pt-32 sm:pt-36 text-white"
+        class="relative z-10 w-full flex flex-col justify-center text-white"
         style="
-          padding-left: clamp(1rem, 5vw, 3rem);
-          padding-right: clamp(1rem, 5vw, 3rem);
-          padding-top: clamp(7.5rem, 14vh, 10rem);
+          padding-left: clamp(1.25rem, 5vw, 3.5rem);
+          padding-right: clamp(1.25rem, 5vw, 3.5rem);
+          padding-top: clamp(6.5rem, 15vh, 9.5rem);
+          padding-bottom: clamp(1rem, 3vh, 2rem);
         "
       >
         <div
           style="
-            max-width: 46rem;
+            max-width: 48rem;
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: clamp(0.75rem, 2vw, 1.25rem);
           "
         >
-          <p
-            class="text-xs tracking-wider font-rework font-medium"
-            style="color: rgba(255, 255, 255, 0.75)"
+          <!-- Editorial Status Metadata -->
+          <div
+            class="hero-meta inline-flex items-center text-xs uppercase tracking-wider font-rework text-white"
+            style="gap: 0.5rem; width: fit-content; opacity: 0.85;"
           >
-            SMK Negeri 1 Denpasar · Software Engineering · Bali
-          </p>
+            <span class="font-semibold text-white">[STATUS]</span>
+            <span style="opacity: 0.4;">/</span>
+            <span>SMK Negeri 1 Denpasar · PKL Intern · Bali</span>
+          </div>
 
-          <h2
-            class="h2 text-white"
-            style="font-size: clamp(1.75rem, 4vw, 2.75rem); line-height: 1.3"
+          <h1
+            class="h2 text-white hero-headline font-avec-sharp"
+            style="
+              font-size: clamp(1.85rem, 4.5vw, 3rem);
+              line-height: 1.25;
+              font-weight: 300;
+              letter-spacing: -0.02em;
+            "
           >
             Building web applications, applied AI, and interfaces.
-          </h2>
+          </h1>
 
           <p
-            class="text-sm sm:text-base font-rework"
-            style="
-              color: rgba(255, 255, 255, 0.85);
-              line-height: 1.65;
-              max-width: 42rem;
-            "
+            class="text-sm sm:text-base font-rework text-white"
+            style="line-height: 1.65; max-width: 42rem; font-weight: 400; opacity: 0.85;"
           >
-            Vocational student on industrial internship (PKL), developing competition web systems and open for freelance projects.
+            Vocational student on industrial internship (PKL), developing
+            competition web systems and open for freelance projects.
           </p>
 
-          <div
-            style="
-              display: flex;
-              flex-wrap: wrap;
-              gap: 1rem;
-              padding-top: 0.75rem;
-            "
-          >
+          <div class="hero-actions">
             <a
               href="#works"
-              class="inline-flex items-center border border-white text-xs uppercase tracking-wider font-rework hover:bg-white hover:text-black transition-state min-h-[44px]"
-              style="gap: 0.5rem; padding: 0.625rem 1.25rem"
+              class="btn-hero-primary font-rework"
+              style="gap: 0.5rem;"
             >
-              Explore Works ↓
+              <span>Explore Works ↓</span>
             </a>
             <a
               href="assets/resume.pdf"
               download="Resume_I_Gede_Kasuma_Dana.pdf"
-              class="inline-flex items-center border border-white/60 text-xs uppercase tracking-wider font-rework hover:border-white hover:bg-white hover:text-black transition-state min-h-[44px]"
-              style="gap: 0.5rem; padding: 0.625rem 1.25rem"
+              class="btn-hero-secondary font-rework"
+              style="gap: 0.5rem;"
             >
-              Resume (PDF) ↗
+              <span>Resume (PDF) ↗</span>
             </a>
           </div>
         </div>
       </div>
 
-      <!-- Hero Masthead (H1: Primary Page Subject) -->
+      <!-- Hero Masthead Graphic (Brand Typography) -->
       <div
         id="hero-title"
-        class="relative z-10 w-full pb-6 pointer-events-none select-none flex items-center justify-center min-h-[clamp(3rem,12vw,9rem)]"
+        class="relative z-10 w-full pb-4 sm:pb-6 pointer-events-none select-none flex items-center justify-center"
+        aria-hidden="true"
         style="
           padding-left: clamp(1rem, 4vw, 2.5rem);
           padding-right: clamp(1rem, 4vw, 2.5rem);
         "
       >
-        <h1 class="h1 text-white text-center font-ceno" style="opacity: 0.95">
+        <div class="h1 text-white text-center font-ceno hero-masthead-text">
           KASUMADANA
-        </h1>
+        </div>
       </div>
     </section>
 
@@ -960,13 +1070,20 @@
               style="font-size: 1rem; line-height: 1.7; font-weight: 300"
               class="text-ink font-avec-sharp"
             >
-              I am a Software Engineering student at SMK Negeri 1 Denpasar, Bali, currently completing my industrial PKL internship. Alongside my internship, I build web systems for competitions and hackathons—focusing on AI integrations (LLMs, MediaPipe vision), SaaS platforms, and UI/UX-driven web applications developed collaboratively with my team.
+              I am a Software Engineering student at SMK Negeri 1 Denpasar,
+              Bali, currently completing my industrial PKL internship. Alongside
+              my internship, I build web systems for competitions and
+              hackathons—focusing on AI integrations (LLMs, MediaPipe vision),
+              SaaS platforms, and UI/UX-driven web applications developed
+              collaboratively with my team.
             </p>
 
             <p class="text-mediumGray font-rework" style="font-size: 0.875rem">
-              I prioritize clean code structure, type safety, and intuitive user experiences. My work has earned back-to-back
+              I prioritize clean code structure, type safety, and intuitive user
+              experiences. My work has earned back-to-back
               <strong style="font-weight: 600; color: var(--ink)"
-                >Distinction Graduate honors at Coding Camp by DBS Foundation &amp; Dicoding (2025 &amp; 2026)</strong
+                >Distinction Graduate honors at Coding Camp by DBS Foundation
+                &amp; Dicoding (2025 &amp; 2026)</strong
               >
               and 2nd Place in LKS Web Technology Bali.
             </p>
@@ -1508,7 +1625,8 @@
           "
         >
           <h2 id="contact-heading" class="h2 text-ink" style="line-height: 1.3">
-            Open for freelance projects, competition collaborations, and technology discussions.
+            Open for freelance projects, competition collaborations, and
+            technology discussions.
           </h2>
 
           <div
@@ -1592,6 +1710,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="text-sm font-semibold text-ink hover:underline min-h-[44px] inline-flex items-center"
+                aria-label="GitHub Profile @kasumadana (opens in new tab)"
               >
                 @kasumadana ↗
               </a>
@@ -1603,6 +1722,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="text-sm font-semibold text-ink hover:underline min-h-[44px] inline-flex items-center"
+                aria-label="LinkedIn Profile I Gede Kasuma Dana (opens in new tab)"
               >
                 in/kasumadana ↗
               </a>
@@ -1616,6 +1736,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="text-sm font-semibold text-ink hover:underline min-h-[44px] inline-flex items-center"
+                aria-label="Canonical Website me.kasuma.id (opens in new tab)"
               >
                 kasuma.id ↗
               </a>
@@ -1739,8 +1860,8 @@
                 href="${p.demoUrl}"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center border border-ink px-3 py-1.5 text-xs font-rework uppercase tracking-wider hover:bg-ink hover:text-canvas transition-state min-h-[44px]"
-                style="gap: 0.25rem;"
+                class="inline-flex items-center justify-center border border-ink text-xs font-rework uppercase tracking-wider hover:bg-ink hover:text-canvas transition-state"
+                style="gap: 0.35rem; padding: 0.55rem 1.1rem; min-height: 44px; border-radius: 2px;"
                 aria-label="Launch live deployment of ${p.title} (opens in new tab)"
               >
                 <span>Live Demo ↗</span>
@@ -1753,8 +1874,8 @@
                 href="${p.repoUrl}"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center border border-lightGray px-3 py-1.5 text-xs font-rework uppercase tracking-wider text-mediumGray hover:text-ink hover:border-ink transition-state min-h-[44px]"
-                style="gap: 0.25rem;"
+                class="inline-flex items-center justify-center border border-lightGray text-xs font-rework uppercase tracking-wider text-mediumGray hover:text-ink hover:border-ink transition-state"
+                style="gap: 0.35rem; padding: 0.55rem 1.1rem; min-height: 44px; border-radius: 2px;"
                 aria-label="View source repository of ${p.title} on GitHub (opens in new tab)"
               >
                 <span>Source Code ↗</span>
@@ -1764,7 +1885,7 @@
 
           const actionLinksContainer =
             actionLinks.length > 0
-              ? `<div style="display: flex; align-items: center; gap: 1rem; padding-top: 0.5rem;">
+              ? `<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; padding-top: 0.5rem;">
                 ${actionLinks.join("")}
                </div>`
               : "";
@@ -1836,14 +1957,44 @@
           .catch(() => {});
       }
 
-      // Smooth Scroll & Animations Setup
+      // Smooth Scroll & Comprehensive Motion System
       function initAnimations() {
         const prefersReducedMotion = window.matchMedia(
           "(prefers-reduced-motion: reduce)",
         ).matches;
+
+        // 1. Navbar Scroll-Aware Contrast Switcher (Accessible WCAG contrast across dark hero and light canvas)
+        const header = document.querySelector("header.site-header");
+        const contentSection = document.getElementById("content");
+
+        if (header && contentSection) {
+          if (
+            typeof ScrollTrigger !== "undefined" &&
+            typeof gsap !== "undefined"
+          ) {
+            ScrollTrigger.create({
+              trigger: contentSection,
+              start: "top 45px",
+              onEnter: () => header.classList.add("is-light"),
+              onLeaveBack: () => header.classList.remove("is-light"),
+            });
+          } else {
+            const handleScroll = () => {
+              const rect = contentSection.getBoundingClientRect();
+              if (rect.top <= 45) {
+                header.classList.add("is-light");
+              } else {
+                header.classList.remove("is-light");
+              }
+            };
+            window.addEventListener("scroll", handleScroll, { passive: true });
+            handleScroll();
+          }
+        }
+
         if (prefersReducedMotion) return;
 
-        // Initialize Lenis Smooth Scroll if available
+        // 2. Initialize Lenis Smooth Scroll
         if (typeof Lenis !== "undefined") {
           const lenis = new Lenis({
             duration: 1.2,
@@ -1852,7 +2003,10 @@
             smoothWheel: true,
           });
 
-          if (typeof ScrollTrigger !== "undefined") {
+          if (
+            typeof ScrollTrigger !== "undefined" &&
+            typeof gsap !== "undefined"
+          ) {
             lenis.on("scroll", ScrollTrigger.update);
             gsap.ticker.add((time) => {
               lenis.raf(time * 1000);
@@ -1861,44 +2015,229 @@
           }
         }
 
-        // Initialize GSAP ScrollTrigger if available
+        // 3. GSAP Interactive Animations & Scroll Triggers
         if (
           typeof gsap !== "undefined" &&
           typeof ScrollTrigger !== "undefined"
         ) {
           gsap.registerPlugin(ScrollTrigger);
 
-          const heroTimeline = gsap.timeline({
-            scrollTrigger: {
-              trigger: "#content",
-              start: "top bottom",
-              end: "top top",
-              scrub: true,
-            },
-          });
+          // Elegant & Understated Hero Entrance Choreography
+          const heroTl = gsap.timeline({ defaults: { ease: "power2.out" } });
+          heroTl
+            .fromTo(
+              ".hero-meta",
+              { y: 12, opacity: 0 },
+              { y: 0, opacity: 0.85, duration: 0.6, delay: 0.05 },
+            )
+            .fromTo(
+              ".hero-headline",
+              { y: 18, opacity: 0 },
+              { y: 0, opacity: 1, duration: 0.7 },
+              "-=0.45",
+            )
+            .fromTo(
+              "#hero-content p",
+              { y: 14, opacity: 0 },
+              { y: 0, opacity: 0.85, duration: 0.6 },
+              "-=0.5",
+            )
+            .fromTo(
+              ".hero-actions a",
+              { y: 12, opacity: 0 },
+              { y: 0, opacity: 1, duration: 0.55, stagger: 0.08 },
+              "-=0.45",
+            )
+            .fromTo(
+              ".hero-masthead-text",
+              { y: 16, opacity: 0 },
+              { y: 0, opacity: 0.92, duration: 0.75 },
+              "-=0.5",
+            );
 
-          heroTimeline
-            .to("#hero-content", { y: -50, opacity: 0.2, ease: "none" }, 0)
-            .to("#hero-title", { y: -25, opacity: 0.3, ease: "none" }, 0)
-            .to("#hero-bg img", { y: 25, opacity: 0.25, ease: "none" }, 0);
+          // Balanced, Dignified Parallax Scrub (gentle transition upon actual downward scroll)
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: "#content",
+                start: "top 95%",
+                end: "top top",
+                scrub: 0.6,
+              },
+            })
+            .to("#hero-content", { y: -45, opacity: 0.15, ease: "none" }, 0)
+            .to(
+              ".hero-masthead-text",
+              { y: -20, opacity: 0.25, ease: "none" },
+              0,
+            )
+            .to(
+              ".hero-bg-img",
+              { y: 25, opacity: 0.35, scale: 1.04, ease: "none" },
+              0,
+            );
+
+          // Selected Works Header & Dynamic Cards
+          gsap.from("#works-heading, #works-counter", {
+            scrollTrigger: {
+              trigger: "#works",
+              start: "top 85%",
+              toggleActions: "play none none none",
+            },
+            y: 20,
+            opacity: 0,
+            duration: 0.55,
+            stagger: 0.08,
+            ease: "power3.out",
+          });
 
           const projectCards = document.querySelectorAll(".project-card");
           projectCards.forEach((card) => {
             gsap.fromTo(
               card,
-              { opacity: 0, y: 25 },
+              { opacity: 0, y: 32 },
               {
                 opacity: 1,
                 y: 0,
-                duration: 0.6,
-                ease: "power2.out",
+                duration: 0.65,
+                ease: "power3.out",
                 scrollTrigger: {
                   trigger: card,
-                  start: "top 90%",
+                  start: "top 88%",
                   toggleActions: "play none none none",
                 },
               },
             );
+          });
+
+          // About Section Profile Photo & Bio
+          gsap.from(".profile-visual-box", {
+            scrollTrigger: {
+              trigger: "#about",
+              start: "top 82%",
+              toggleActions: "play none none none",
+            },
+            opacity: 0,
+            scale: 0.96,
+            y: 25,
+            duration: 0.65,
+            ease: "power3.out",
+          });
+
+          gsap.from("#about-heading, #about p", {
+            scrollTrigger: {
+              trigger: "#about",
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+            opacity: 0,
+            y: 20,
+            duration: 0.6,
+            stagger: 0.08,
+            ease: "power3.out",
+          });
+
+          gsap.from("#education-timeline > div", {
+            scrollTrigger: {
+              trigger: "#education-timeline",
+              start: "top 85%",
+              toggleActions: "play none none none",
+            },
+            opacity: 0,
+            y: 18,
+            duration: 0.55,
+            stagger: 0.08,
+            ease: "power3.out",
+          });
+
+          // Credentials Section
+          gsap.from("#credentials-heading", {
+            scrollTrigger: {
+              trigger: "#credentials",
+              start: "top 85%",
+              toggleActions: "play none none none",
+            },
+            opacity: 0,
+            y: 18,
+            duration: 0.55,
+            ease: "power3.out",
+          });
+
+          gsap.from("#credentials > div:nth-of-type(2)", {
+            scrollTrigger: {
+              trigger: "#credentials > div:nth-of-type(2)",
+              start: "top 88%",
+              toggleActions: "play none none none",
+            },
+            opacity: 0,
+            y: 24,
+            duration: 0.6,
+            ease: "power3.out",
+          });
+
+          gsap.from("#achievements-list > div", {
+            scrollTrigger: {
+              trigger: "#achievements-list",
+              start: "top 85%",
+              toggleActions: "play none none none",
+            },
+            opacity: 0,
+            x: -16,
+            duration: 0.5,
+            stagger: 0.05,
+            ease: "power3.out",
+          });
+
+          gsap.from("#skills-list > div", {
+            scrollTrigger: {
+              trigger: "#skills-list",
+              start: "top 85%",
+              toggleActions: "play none none none",
+            },
+            opacity: 0,
+            x: 16,
+            duration: 0.5,
+            stagger: 0.05,
+            ease: "power3.out",
+          });
+
+          // Contact Section
+          gsap.from("#contact-heading", {
+            scrollTrigger: {
+              trigger: "#contact",
+              start: "top 82%",
+              toggleActions: "play none none none",
+            },
+            opacity: 0,
+            y: 25,
+            duration: 0.65,
+            ease: "power3.out",
+          });
+
+          gsap.from("#contact a[href^='mailto'], #copyEmailBtn", {
+            scrollTrigger: {
+              trigger: "#contact a[href^='mailto']",
+              start: "top 90%",
+              toggleActions: "play none none none",
+            },
+            opacity: 0,
+            y: 18,
+            duration: 0.55,
+            stagger: 0.08,
+            ease: "power3.out",
+          });
+
+          gsap.from("#contact > div > div:last-child > div", {
+            scrollTrigger: {
+              trigger: "#contact > div > div:last-child",
+              start: "top 92%",
+              toggleActions: "play none none none",
+            },
+            opacity: 0,
+            y: 14,
+            duration: 0.5,
+            stagger: 0.05,
+            ease: "power3.out",
           });
         }
       }
