@@ -1,4 +1,7 @@
 # Allow search crawlers and AI search answer bots
+User-agent: *
+Allow: /
+
 User-agent: Googlebot
 Allow: /
 
@@ -21,6 +24,9 @@ User-agent: anthropic-ai
 Allow: /
 
 User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
 Allow: /
 
 # Block scraping-only bulk datasets
